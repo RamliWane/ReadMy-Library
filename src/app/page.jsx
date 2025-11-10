@@ -21,7 +21,7 @@ export default function Home() {
                 Temukan buku yang menarik disini
               </p>
               <button
-                className="text-[#6DC700] bg-white border-2 border-[#6DC700] font-bold py-2 px-6 rounded-lg w-fit hover:bg-[#6DC700] hover:text-white transition"
+                className="text-[#6DC700]  bg-white border-2 border-[#6DC700] font-bold py-2 px-6 rounded-lg w-fit hover:bg-[#6DC700] hover:text-white transition-transform duration-300 hover:-translate-y-2 cursor-pointer"
                 style={{ fontFamily: "'Hanken Grotesk', sans-serif" }}
               >
                 Read More
@@ -30,7 +30,7 @@ export default function Home() {
           </div>
 
           <div className="flex pr-10">
-            <div className="hover:scale-105 transition-transform duration-300 cursor-pointer">
+            <div className=" transition-transform duration-300 hover:-translate-y-5 cursor-pointer">
               <img
                 src="./planet-luna-book-2.png"
                 alt="Book 1"
@@ -38,7 +38,7 @@ export default function Home() {
               />
             </div>
 
-            <div className="hover:scale-105 transition-transform duration-300 cursor-pointer">
+            <div className="transition-transform duration-300 hover:-translate-y-5 cursor-pointer">
               <img
                 src="./arwah-book.png"
                 alt="Book 2"
@@ -46,7 +46,7 @@ export default function Home() {
               />
             </div>
 
-            <div className="hover:scale-105 transition-transform duration-300 cursor-pointer">
+            <div className="transition-transform duration-300 hover:-translate-y-5 cursor-pointer">
               <img
                 src="./harry-potter-book.png"
                 alt="Book 3"
@@ -54,7 +54,7 @@ export default function Home() {
               />
             </div>
 
-            <div className="hover:scale-105 transition-transform duration-300 cursor-pointer">
+            <div className="transition-transform duration-300 hover:-translate-y-5 cursor-pointer">
               <img
                 src="./deadpool-book.png"
                 alt="Book 4"
@@ -65,7 +65,28 @@ export default function Home() {
         </div>
 
 
-
+        <section>
+          <div className="bg-[#ECF4E8]">
+            <div className="flex pt-10 flex-wrap justify-around items-center">
+              <h1 className="text-3xl text-black" style={{ fontFamily: "'Happy Monkey', cursive" }}>
+                About The <span className="text-[#6DC700]">ReadMy</span> <br />Library.
+              </h1>
+              <p className="text-[17px] font-bold text-black" style={{ fontFamily: "'Hanken Grotesk', sans-serif" }}>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, <br />sed do eiusmod tempor incididunt ut labore et dolore <br />magna aliqua. Ut enim ad minim veniam
+              </p>
+            </div>
+            <div className="flex justify-center">
+              <div className="bg-[#CCC5B8] flex flex-wrap rounded-lg mb-10 mt-10">
+                  <img className="w-90 md:w-60 md:h-65" src="./remove.png" alt="" />
+                <div className="bg-[white] mr-3 flex justify-start mt-2 rounded-lg lg:w-120 lg:h-60 md:w-100 md:h-60">
+                  <h1 className="text-3xl pt-25 pl-10 text-black" style={{ fontFamily: "'Happy Monkey', cursive" }}>
+                    <span className="text-[#6DC700]">ReadMy</span>
+                  </h1>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
 
         {/* ABOUT THE READMY LIBRARY */}
 
@@ -74,114 +95,114 @@ export default function Home() {
 
         <section>
 
-            <div className="flex items-center justify-center mt-5">
-              <div className="flex flex-col text-center gap-1">
-                <h1 className="text-4xl lg:text-4xl text-black" style={{ fontFamily: "'Happy Monkey', cursive" }}>
-                  New <span className="text-[#6DC700]">Release</span> Books
-                </h1>
-                <p className="text-[17px] font-bold text-black" style={{ fontFamily: "'Hanken Grotesk', sans-serif" }}>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing
-                </p>
-                <p className="text-[17px] font-bold text-black" style={{ fontFamily: "'Hanken Grotesk', sans-serif" }}>
-                  elit, sed do eiusmod tempor in
-                </p>
-              </div>
+          <div className="flex items-center justify-center mt-5">
+            <div className="flex flex-col text-center gap-1">
+              <h1 className="text-4xl lg:text-4xl text-black" style={{ fontFamily: "'Happy Monkey', cursive" }}>
+                New <span className="text-[#6DC700]">Release</span> Books
+              </h1>
+              <p className="text-[17px] font-bold text-black" style={{ fontFamily: "'Hanken Grotesk', sans-serif" }}>
+                Lorem ipsum dolor sit amet, consectetur adipiscing
+              </p>
+              <p className="text-[17px] font-bold text-black" style={{ fontFamily: "'Hanken Grotesk', sans-serif" }}>
+                elit, sed do eiusmod tempor in
+              </p>
             </div>
-            <div className="flex flex-wrap items-center justify-center gap-15 mt-10">
-              <div className="flex flex-col items-center text center">
-                <img src="./atomic-habbits-book.png" alt="" />
-                <p className="text-[17px] pt-3 font-bold text-black" style={{ fontFamily: "'Hanken Grotesk', sans-serif" }}>
-                  James Clear
-                </p>
-                <h1 className="text-xl text-black" style={{ fontFamily: "'Happy Monkey', cursive" }}>
-                  <span className="text-[#6DC700]">Atomic Habbits</span>
-                </h1>
-                <p className="text-[17px] text-[#B5830D] font-bold" style={{ fontFamily: "'Hanken Grotesk', sans-serif" }}>
-                  1 October 2025
-                </p>
-              </div>
-              <div className="flex flex-col items-center text center">
-                <img src="./laskar-pelangi-book.png" alt="" />
-                <p className="text-[17px] pt-3 font-bold text-black" style={{ fontFamily: "'Hanken Grotesk', sans-serif" }}>
-                  James Clear
-                </p>
-                <h1 className="text-xl text-black" style={{ fontFamily: "'Happy Monkey', cursive" }}>
-                  <span className="text-[#6DC700]">Atomic Habbits</span>
-                </h1>
-                <p className="text-[17px] text-[#B5830D] font-bold" style={{ fontFamily: "'Hanken Grotesk', sans-serif" }}>
-                  1 October 2025              
-                </p>
-              </div>
-              <div className="flex flex-col items-center text center">
-                <img src="./sapiens-book.png" alt="" />
-                <p className="text-[17px] pt-3 font-bold text-black" style={{ fontFamily: "'Hanken Grotesk', sans-serif" }}>
-                  James Clear
-                </p>
-                <h1 className="text-xl text-black" style={{ fontFamily: "'Happy Monkey', cursive" }}>
-                  <span className="text-[#6DC700]">Atomic Habbits</span>
-                </h1>
-                <p className="text-[17px] text-[#B5830D] font-bold" style={{ fontFamily: "'Hanken Grotesk', sans-serif" }}>
-                  1 October 2025              
-                </p>
-              </div>
-              <div className="flex flex-col items-center text center">
-                <img src="./mariposa-book.png" alt="" />
-                <p className="text-[17px] pt-3 font-bold text-black" style={{ fontFamily: "'Hanken Grotesk', sans-serif" }}>
-                  James Clear
-                </p>
-                <h1 className="text-xl text-black" style={{ fontFamily: "'Happy Monkey', cursive" }}>
-                  <span className="text-[#6DC700]">Atomic Habbits</span>
-                </h1>
-                <p className="text-[17px] text-[#B5830D] font-bold" style={{ fontFamily: "'Hanken Grotesk', sans-serif" }}>
-                  1 October 2025              
-                </p>
-              </div>
-              <div className="flex flex-col items-center text center">
-                <img src="./five-feet-apart-book.png" alt="" />
-                <p className="text-[17px] pt-3 font-bold text-black" style={{ fontFamily: "'Hanken Grotesk', sans-serif" }}>
-                  James Clear
-                </p>
-                <h1 className="text-xl text-black" style={{ fontFamily: "'Happy Monkey', cursive" }}>
-                  <span className="text-[#6DC700]">Atomic Habbits</span>
-                </h1>
-                <p className="text-[17px] text-[#B5830D] font-bold" style={{ fontFamily: "'Hanken Grotesk', sans-serif" }}>
-                  1 October 2025
-                </p>
-              </div>
+          </div>
+          <div className="flex flex-wrap items-center justify-center gap-15 mt-10">
+            <div className="flex flex-col items-center text center">
+              <img src="./atomic-habbits-book.png" alt="" />
+              <p className="text-[17px] pt-3 font-bold text-black" style={{ fontFamily: "'Hanken Grotesk', sans-serif" }}>
+                James Clear
+              </p>
+              <h1 className="text-xl text-black" style={{ fontFamily: "'Happy Monkey', cursive" }}>
+                <span className="text-[#6DC700]">Atomic Habbits</span>
+              </h1>
+              <p className="text-[17px] text-[#B5830D] font-bold" style={{ fontFamily: "'Hanken Grotesk', sans-serif" }}>
+                1 October 2025
+              </p>
+            </div>
+            <div className="flex flex-col items-center text center">
+              <img src="./laskar-pelangi-book.png" alt="" />
+              <p className="text-[17px] pt-3 font-bold text-black" style={{ fontFamily: "'Hanken Grotesk', sans-serif" }}>
+                James Clear
+              </p>
+              <h1 className="text-xl text-black" style={{ fontFamily: "'Happy Monkey', cursive" }}>
+                <span className="text-[#6DC700]">Atomic Habbits</span>
+              </h1>
+              <p className="text-[17px] text-[#B5830D] font-bold" style={{ fontFamily: "'Hanken Grotesk', sans-serif" }}>
+                1 October 2025
+              </p>
+            </div>
+            <div className="flex flex-col items-center text center">
+              <img src="./sapiens-book.png" alt="" />
+              <p className="text-[17px] pt-3 font-bold text-black" style={{ fontFamily: "'Hanken Grotesk', sans-serif" }}>
+                James Clear
+              </p>
+              <h1 className="text-xl text-black" style={{ fontFamily: "'Happy Monkey', cursive" }}>
+                <span className="text-[#6DC700]">Atomic Habbits</span>
+              </h1>
+              <p className="text-[17px] text-[#B5830D] font-bold" style={{ fontFamily: "'Hanken Grotesk', sans-serif" }}>
+                1 October 2025
+              </p>
+            </div>
+            <div className="flex flex-col items-center text center">
+              <img src="./mariposa-book.png" alt="" />
+              <p className="text-[17px] pt-3 font-bold text-black" style={{ fontFamily: "'Hanken Grotesk', sans-serif" }}>
+                James Clear
+              </p>
+              <h1 className="text-xl text-black" style={{ fontFamily: "'Happy Monkey', cursive" }}>
+                <span className="text-[#6DC700]">Atomic Habbits</span>
+              </h1>
+              <p className="text-[17px] text-[#B5830D] font-bold" style={{ fontFamily: "'Hanken Grotesk', sans-serif" }}>
+                1 October 2025
+              </p>
+            </div>
+            <div className="flex flex-col items-center text center">
+              <img src="./five-feet-apart-book.png" alt="" />
+              <p className="text-[17px] pt-3 font-bold text-black" style={{ fontFamily: "'Hanken Grotesk', sans-serif" }}>
+                James Clear
+              </p>
+              <h1 className="text-xl text-black" style={{ fontFamily: "'Happy Monkey', cursive" }}>
+                <span className="text-[#6DC700]">Atomic Habbits</span>
+              </h1>
+              <p className="text-[17px] text-[#B5830D] font-bold" style={{ fontFamily: "'Hanken Grotesk', sans-serif" }}>
+                1 October 2025
+              </p>
+            </div>
 
-            </div>
+          </div>
         </section>
         <section>
 
-            <div className="flex items-center justify-center mt-20">
-              <div className="flex flex-col text-center gap-1">
-                <h1 className="text-4xl lg:text-4xl text-black" style={{ fontFamily: "'Happy Monkey', cursive" }}>
-                  Most <span className="text-[#6DC700]">Popular</span> Novels
+          <div className="flex items-center justify-center mt-20">
+            <div className="flex flex-col text-center gap-1">
+              <h1 className="text-4xl lg:text-4xl text-black" style={{ fontFamily: "'Happy Monkey', cursive" }}>
+                Most <span className="text-[#6DC700]">Popular</span> Novels
+              </h1>
+              <p className="text-[17px] font-bold text-black" style={{ fontFamily: "'Hanken Grotesk', sans-serif" }}>
+                Lorem ipsum dolor sit amet, consectetur adipiscing
+              </p>
+              <p className="text-[17px] font-bold text-black" style={{ fontFamily: "'Hanken Grotesk', sans-serif" }}>
+                elit, sed do eiusmod tempor in
+              </p>
+            </div>
+          </div>
+          <div className="flex flex-wrap items-center justify-center">
+            <div className="flex flex-wrap items-center text center">
+              <img className="w-2xl" src="./piercy-jackson-book.png" alt="" />
+              <div className="flex flex-col">
+                <p className="text-[17px] pt-3 font-bold text-black" style={{ fontFamily: "'Hanken Grotesk', sans-serif" }}>
+                  James Clear
+                </p>
+                <h1 className="text-xl text-black" style={{ fontFamily: "'Happy Monkey', cursive" }}>
+                  <span className="text-[#6DC700]">Atomic Habbits</span>
                 </h1>
-                <p className="text-[17px] font-bold text-black" style={{ fontFamily: "'Hanken Grotesk', sans-serif" }}>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing
-                </p>
-                <p className="text-[17px] font-bold text-black" style={{ fontFamily: "'Hanken Grotesk', sans-serif" }}>
-                  elit, sed do eiusmod tempor in
+                <p className="text-[17px] text-[#B5830D] font-bold" style={{ fontFamily: "'Hanken Grotesk', sans-serif" }}>
+                  1 October 2025
                 </p>
               </div>
             </div>
-            <div className="flex flex-wrap items-center justify-center">
-              <div className="flex flex-wrap items-center text center">
-                <img className="w-2xl" src="./piercy-jackson-book.png" alt="" />
-                <div className="flex flex-col">
-                  <p className="text-[17px] pt-3 font-bold text-black" style={{ fontFamily: "'Hanken Grotesk', sans-serif" }}>
-                    James Clear
-                  </p>
-                  <h1 className="text-xl text-black" style={{ fontFamily: "'Happy Monkey', cursive" }}>
-                    <span className="text-[#6DC700]">Atomic Habbits</span>
-                  </h1>
-                  <p className="text-[17px] text-[#B5830D] font-bold" style={{ fontFamily: "'Hanken Grotesk', sans-serif" }}>
-                    1 October 2025
-                  </p>
-                </div>
-              </div>
-            </div>
+          </div>
         </section>
       </main>
     </div>
