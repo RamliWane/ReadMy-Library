@@ -77,7 +77,7 @@ export default function Home() {
             </div>
             <div className="flex justify-center">
               <div className="bg-[#CCC5B8] flex flex-wrap rounded-lg mb-10 mt-10">
-                  <img className="w-90 md:w-60 md:h-65" src="./remove.png" alt="" />
+                <img className="w-90 md:w-60 md:h-65" src="./remove.png" alt="" />
                 <div className="bg-[white] mr-3 flex justify-start mt-2 rounded-lg lg:w-120 lg:h-60 md:w-100 md:h-60">
                   <h1 className="text-3xl pt-25 pl-10 text-black" style={{ fontFamily: "'Happy Monkey', cursive" }}>
                     <span className="text-[#6DC700]">ReadMy</span>
@@ -187,23 +187,134 @@ export default function Home() {
               </p>
             </div>
           </div>
-          <div className="flex flex-wrap items-center justify-center">
-            <div className="flex flex-wrap items-center text center">
-              <img className="w-2xl" src="./piercy-jackson-book.png" alt="" />
-              <div className="flex flex-col">
-                <p className="text-[17px] pt-3 font-bold text-black" style={{ fontFamily: "'Hanken Grotesk', sans-serif" }}>
-                  James Clear
-                </p>
-                <h1 className="text-xl text-black" style={{ fontFamily: "'Happy Monkey', cursive" }}>
-                  <span className="text-[#6DC700]">Atomic Habbits</span>
+          <div className="flex flex-wrap justify-start -mt-20">
+            <div className="flex flex-wrap items-center justify-center">
+              <img className="w-2xl lg:pl-10" src="./popular-test.png" alt="" />
+              <div className="flex flex-col lg:pt-20">
+                <h1 className="text-4xl lg:text-4xl text-black" style={{ fontFamily: "'Happy Monkey', cursive" }}>
+                  Piercy Jackson #1 -<span className="text-[#6DC700]">Rick <br />Riordan</span>
                 </h1>
-                <p className="text-[17px] text-[#B5830D] font-bold" style={{ fontFamily: "'Hanken Grotesk', sans-serif" }}>
-                  1 October 2025
+                <p className="text-[20px] font-bold text-black" style={{ fontFamily: "'Hanken Grotesk', sans-serif" }}>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing <br />elit, sed do eiusmod tempor incididunt ut labore <br />et dolore magna aliqua.
                 </p>
+                <button
+                  className="text-[#6DC700]  bg-white border-2 border-[#6DC700] font-bold py-2 mt-3 px-6 rounded-lg w-fit hover:bg-[#6DC700] hover:text-white transition-transform duration-300 hover:-translate-y-2 cursor-pointer"
+                  style={{ fontFamily: "'Hanken Grotesk', sans-serif" }}
+                >
+                  Read More
+                </button>
+              </div>
+            </div>
+          </div>
+          <div className="flex flex-wrap justify-end lg:-mt-20 mt-5">
+            <div className="flex flex-wrap items-center justify-center flex-row-reverse">
+              <img className="w-xl lg:pr-10" src="./test-asal.png" alt="" />
+              <div className="flex flex-col lg:pt-20 lg:pr-40 text-right">
+                <h1 className="text-4xl lg:text-4xl text-black" style={{ fontFamily: "'Happy Monkey', cursive" }}>
+                  Piercy Jackson #1 -<span className="text-[#6DC700]">Rick <br />Riordan</span>
+                </h1>
+                <p className="text-[20px] font-bold text-black" style={{ fontFamily: "'Hanken Grotesk', sans-serif" }}>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing <br />elit, sed do eiusmod tempor incididunt ut labore <br />et dolore magna aliqua.
+                </p>
+                <div className="flex justify-end">
+                  <button
+                    className="text-[#6DC700] bg-white border-2 border-[#6DC700] font-bold py-2 mt-3 px-6 rounded-lg w-fit hover:bg-[#6DC700] hover:text-white transition-transform duration-300 hover:-translate-y-2 cursor-pointer"
+                    style={{ fontFamily: "'Hanken Grotesk', sans-serif" }}
+                  >
+                    Read More
+                  </button>
+                </div>
               </div>
             </div>
           </div>
         </section>
+
+        <section>
+          <div className="flex flex-wrap justify-center items-center gap-15 mt-20 mb-20">
+            <img className="w-100" src="./retangle-coba.png" alt="" />
+            <img className="w-65" src="./retangle-coba-2.png" alt="" />
+            <div className="flex items-start flex-col gap-2">
+              <h1 className="text-4xl lg:text-4xl text-black" style={{ fontFamily: "'Happy Monkey', cursive" }}>
+                Lorem ipsum dolor sit amet, <br />consectetur<span className="text-[#6DC700]"> adipiscing elit</span>
+              </h1>
+              <p className="text-[20px] font-bold text-black" style={{ fontFamily: "'Hanken Grotesk', sans-serif" }}>
+                Lorem ipsum dolor sit amet, consectetur adipiscing <br />elit, sed do eiusmod tempor incididunt ut labore <br />et dolore magna aliqua.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <footer className="bg-gray-900 text-white">
+          {/* Main Footer Content */}
+          <div className="max-w-7xl mx-auto px-8 py-12">
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+
+              {/* Brand Section */}
+              <div className="col-span-1 md:col-span-1">
+                <h2 className="text-2xl font-bold text-[#6DC700] mb-4">BookStore</h2>
+                <p className="text-gray-400 text-sm leading-relaxed">
+                  Your destination for discovering amazing books and stories that inspire.
+                </p>
+                <div className="flex gap-4 mt-6">
+                  <a href="#" className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-[#6DC700] transition-colors">
+                    <span className="text-xl">📘</span>
+                  </a>
+                  <a href="#" className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-[#6DC700] transition-colors">
+                    <span className="text-xl">📱</span>
+                  </a>
+                  <a href="#" className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-[#6DC700] transition-colors">
+                    <span className="text-xl">✉️</span>
+                  </a>
+                </div>
+              </div>
+
+              {/* Quick Links */}
+              <div>
+                <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
+                <ul className="space-y-2">
+                  <li><a href="#" className="text-gray-400 hover:text-[#6DC700] transition-colors">Home</a></li>
+                  <li><a href="#" className="text-gray-400 hover:text-[#6DC700] transition-colors">About Us</a></li>
+                  <li><a href="#" className="text-gray-400 hover:text-[#6DC700] transition-colors">Books</a></li>
+                  <li><a href="#" className="text-gray-400 hover:text-[#6DC700] transition-colors">Authors</a></li>
+                  <li><a href="#" className="text-gray-400 hover:text-[#6DC700] transition-colors">Blog</a></li>
+                </ul>
+              </div>
+
+              {/* Categories */}
+              <div>
+                <h3 className="text-lg font-semibold mb-4">Categories</h3>
+                <ul className="space-y-2">
+                  <li><a href="#" className="text-gray-400 hover:text-[#6DC700] transition-colors">Fiction</a></li>
+                  <li><a href="#" className="text-gray-400 hover:text-[#6DC700] transition-colors">Non-Fiction</a></li>
+                  <li><a href="#" className="text-gray-400 hover:text-[#6DC700] transition-colors">Mystery</a></li>
+                  <li><a href="#" className="text-gray-400 hover:text-[#6DC700] transition-colors">Romance</a></li>
+                  <li><a href="#" className="text-gray-400 hover:text-[#6DC700] transition-colors">Sci-Fi</a></li>
+                </ul>
+              </div>
+
+              {/* Contact Info */}
+              <div>
+                <h3 className="text-lg font-semibold mb-4">Contact</h3>
+                <ul className="space-y-3 text-gray-400 text-sm">
+                  <li className="flex items-start gap-2">
+                    <span>📍</span>
+                    <span>123 Book Street, Reading City, RC 12345</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span>📧</span>
+                    <span>info@bookstore.com</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span>📞</span>
+                    <span>+1 (555) 123-4567</span>
+                  </li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+        </footer>
+
       </main>
     </div>
   );
