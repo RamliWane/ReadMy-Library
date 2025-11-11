@@ -13,11 +13,9 @@ export default function Navbar() {
             <nav className="bg-white border-b border-gray-200 shadow-sm">
                 <div className=" mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex items-center justify-between h-16">
-                        <a href="/" className="flex items-center pr-20">
                             <span className="text-2xl font-bold text-gray-900" style={{ fontFamily: "'Homemade Apple', cursive" }}>
                                 ReadMy
                             </span>
-                        </a>
 
                         <div className="hidden md:flex flex-1 max-w-sm mx-8 ml-auto mr-4">
                             <div className="relative w-full">

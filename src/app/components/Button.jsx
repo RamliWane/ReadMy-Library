@@ -6,7 +6,7 @@ import styled from 'styled-components';
 const Button = () => {
   return (
     <StyledWrapper>
-        <a href="/">  
+        <a href="/login">  
             <div data-tooltip="Home" className="button">
                 <div className="button-wrapper">
                 <div className="text">Sign Up</div>
