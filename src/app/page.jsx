@@ -35,39 +35,39 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="flex pr-10">
-              <div className=" transition-transform duration-300 hover:-translate-y-5 cursor-pointer">
-                <img
-                  src="./planet-luna-book-2.png"
-                  alt="Book 1"
-                  className="w-150 h-84 object-cover rounded-md shadow-xl"
-                />
-              </div>
+            <div className=" flex overflow-x-auto gap-4  pr-10">
+                <div className="transition-transform duration-300 hover:-translate-y-5 cursor-pointer">
+                  <img
+                    src="./planet-luna-book-2.png"
+                    alt="Book 1"
+                    className="w-150 h-84 object-cover rounded-md shadow-xl"
+                  />
+                </div>
 
-              <div className="transition-transform duration-300 hover:-translate-y-5 cursor-pointer">
-                <img
-                  src="./arwah-book.png"
-                  alt="Book 2"
-                  className="w-150 h-84 object-cover rounded-md shadow-xl"
-                />
-              </div>
+                <div className="transition-transform duration-300 hover:-translate-y-5 cursor-pointer">
+                  <img
+                    src="./arwah-book.png"
+                    alt="Book 2"
+                    className="w-150 h-84 object-cover rounded-md shadow-xl"
+                  />
+                </div>
 
-              <div className="transition-transform duration-300 hover:-translate-y-5 cursor-pointer">
-                <img
-                  src="./harry-potter-book.png"
-                  alt="Book 3"
-                  className="w-150 h-84 object-cover rounded-md shadow-xl"
-                />
-              </div>
+                <div className="transition-transform duration-300 hover:-translate-y-5 cursor-pointer">
+                  <img
+                    src="./harry-potter-book.png"
+                    alt="Book 3"
+                    className="w-150 h-84 object-cover rounded-md shadow-xl"
+                  />
+                </div>
 
-              <div className="transition-transform duration-300 hover:-translate-y-5 cursor-pointer">
-                <img
-                  src="./deadpool-book.png"
-                  alt="Book 4"
-                  className="w-130 h-84 object-cover rounded-md shadow-xl"
-                />
+                <div className="transition-transform duration-300 hover:-translate-y-5 cursor-pointer">
+                  <img
+                    src="./deadpool-book.png"
+                    alt="Book 4"
+                    className="w-130 h-84 object-cover rounded-md shadow-xl"
+                  />
+                </div>
               </div>
-            </div>
           </div>
 
 
@@ -93,11 +93,6 @@ export default function Home() {
               </div>
             </div>
           </section>
-
-          {/* ABOUT THE READMY LIBRARY */}
-
-
-
 
           <section>
 
