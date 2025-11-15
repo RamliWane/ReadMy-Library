@@ -1,9 +1,8 @@
 export default function Sidebar() {
     return (
         <div
-            className="sticky top-0 h-screen flex w-full max-w-[20rem] flex-col rounded-xl bg-white bg-clip-border p-4 text-gray-700 shadow-xl shadow-blue-gray-900/5">
+            className="sticky top-0 h-screen flex w-full max-w-[16rem] flex-col bg-white bg-clip-border p-3 text-gray-700 border">
             <div className="p-4 mb-2">
-                <link href="https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap" rel="stylesheet" />
                 <span className="text-2xl font-bold text-gray-900" style={{ fontFamily: "'Homemade Apple', cursive" }}>
                     ReadMy
                 </span>

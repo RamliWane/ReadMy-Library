@@ -1,102 +1,281 @@
+import RightBar from "../components/RightBar";
 import Sidebar from "../components/Sidebar";
+import { Mic, Clock, MapPin } from 'lucide-react';
 
-export default function Dashboard() {
+export default function Home() {
     return (
         <div className="flex bg-[#ECF4E8]">
             <Sidebar />
-            <div className="flex-1 flex justify-center flex-col flex-wrap items-start p-6">
-                <img className="w-full shadow-xl max-w-6xl h-60 object-cover" src="/absurd-utama.png" alt="Banner" />
-                <div className="bg-white mt-10 rounded-xl">
+            <div className="flex-1 flex justify-center flex-col flex-wrap items-start">
+                <img
+                    className="w-full p-3 max-w-6xl h-60"
+                    src="/absurd-utama.png"
+                    alt="Banner"
+                />
+                <div className="bg-white mt-2 w-full h-screen">
                     <section>
-                        <div className="flex items-start justify-start mt-5">
-                            <div className="flex flex-col text-start ml-5">
-                                <h1 className="text-3xl lg:text-3xl text-black" style={{ fontFamily: "'Happy Monkey', cursive" }}>
-                                    <span className="text-[#6DC700]">Recomended For You</span>
-                                </h1>
-                                <p className="text-[16px] font-bold text-black" style={{ fontFamily: "'Hanken Grotesk', sans-serif" }}>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing
+                        <div className="flex flex-col text-start ml-5 mt-4">
+                            <h1
+                                className="text-xl lg:text-xl text-black"
+                                style={{ fontFamily: "'Happy Monkey', cursive" }}
+                            >
+                                <span className="text-[#6DC700]">Recomended For You</span>
+                            </h1>
+
+                            <p
+                                className="text-[14px] text-black"
+                                style={{ fontFamily: "'Hanken Grotesk', sans-serif" }}
+                            >
+                                Lorem ipsum dolor sit amet, consectetur adipiscing
+                            </p>
+                        </div>
+
+                        <div className="flex flex-wrap items-center justify-center gap-2 mt-5">
+                            <div className="relative flex flex-col max-w-xl items-center">
+                                <img className="w-45 rounded-lg" src="./atomic-habbits-book.png" alt="Atomic Habits" />
+                                <div className="absolute bottom-0 left-0 w-full h-20 bg-gradient-to-t from-black/70 to-transparent"></div>
+
+                                <p
+                                    className="text-[17px] bg-[#6DC700] w-30 h-7 flex items-center justify-center -mt-20 rounded-2xl text-white relative z-[10]"
+                                    style={{ fontFamily: "'Alexandria', sans-serif" }}
+                                >
+                                    Fiksi
                                 </p>
-                                <p className="text-[16px] font-bold text-black" style={{ fontFamily: "'Hanken Grotesk', sans-serif" }}>
-                                    elit, sed do eiusmod tempor in
+
+                                <h1 className="text-xl text-white font-bold z-10">Atomic Habits</h1>
+                                <p
+                                    className="text-[17px] text-white z-10"
+                                    style={{ fontFamily: "'Alexandria', sans-serif" }}
+                                >
+                                    Abiel Yusuf
+                                </p>
+                            </div>
+                            <div className="relative flex flex-col items-center">
+                                <img className="w-45 rounded-lg" src="./atomic-habbits-book.png" alt="Atomic Habits" />
+                                <div className="absolute bottom-0 left-0 w-full h-20 bg-gradient-to-t from-black/70 to-transparent"></div>
+
+                                <p
+                                    className="text-[17px] bg-[#6DC700] w-30 h-7 flex items-center justify-center -mt-20 rounded-2xl text-white relative z-[10]"
+                                    style={{ fontFamily: "'Alexandria', sans-serif" }}
+                                >
+                                    Fiksi
+                                </p>
+
+                                <h1 className="text-xl text-white font-bold z-10">Atomic Habits</h1>
+                                <p
+                                    className="text-[17px] text-white z-10"
+                                    style={{ fontFamily: "'Alexandria', sans-serif" }}
+                                >
+                                    Abiel Yusuf
+                                </p>
+                            </div>
+                            <div className="relative flex flex-col items-center">
+                                <img className="w-45 rounded-lg" src="./atomic-habbits-book.png" alt="Atomic Habits" />
+                                <div className="absolute bottom-0 left-0 w-full h-20 bg-gradient-to-t from-black/70 to-transparent"></div>
+
+                                <p
+                                    className="text-[17px] bg-[#6DC700] w-30 h-7 flex items-center justify-center -mt-20 rounded-2xl text-white relative z-[10]"
+                                    style={{ fontFamily: "'Alexandria', sans-serif" }}
+                                >
+                                    Fiksi
+                                </p>
+
+                                <h1 className="text-xl text-white font-bold z-10">Atomic Habits</h1>
+                                <p
+                                    className="text-[17px] text-white z-10"
+                                    style={{ fontFamily: "'Alexandria', sans-serif" }}
+                                >
+                                    Abiel Yusuf
+                                </p>
+                            </div>
+                            <div className="relative flex flex-col items-center">
+                                <img className="w-45 rounded-lg" src="./atomic-habbits-book.png" alt="Atomic Habits" />
+                                <div className="absolute bottom-0 left-0 w-full h-20 bg-gradient-to-t from-black/70 to-transparent"></div>
+
+                                <p
+                                    className="text-[17px] bg-[#6DC700] w-30 h-7 flex items-center justify-center -mt-20 rounded-2xl text-white relative z-[10]"
+                                    style={{ fontFamily: "'Alexandria', sans-serif" }}
+                                >
+                                    Fiksi
+                                </p>
+
+                                <h1 className="text-xl text-white font-bold z-10">Atomic Habits</h1>
+                                <p
+                                    className="text-[17px] text-white z-10"
+                                    style={{ fontFamily: "'Alexandria', sans-serif" }}
+                                >
+                                    Abiel Yusuf
+                                </p>
+                            </div>
+                            <div className="relative flex flex-col items-center">
+                                <img className="w-45 rounded-lg" src="./atomic-habbits-book.png" alt="Atomic Habits" />
+                                <div className="absolute bottom-0 left-0 w-full h-20 bg-gradient-to-t from-black/70 to-transparent"></div>
+
+                                <p
+                                    className="text-[17px] bg-[#6DC700] w-30 h-7 flex items-center justify-center -mt-20 rounded-2xl text-white relative z-[10]"
+                                    style={{ fontFamily: "'Alexandria', sans-serif" }}
+                                >
+                                    Fiksi
+                                </p>
+
+                                <h1 className="text-xl text-white font-bold z-10">Atomic Habits</h1>
+                                <p
+                                    className="text-[17px] text-white z-10"
+                                    style={{ fontFamily: "'Alexandria', sans-serif" }}
+                                >
+                                    Abiel Yusuf
                                 </p>
                             </div>
                         </div>
-                        <div className="flex flex-wrap items-center justify-center gap-5 pl-3 mt-5">
-                            <div className="relative flex flex-col items-center">
-                                {/* Gambar */}
-                                <img className="w-full" src="./atomic-habbits-book.png" alt="" />
+                        <div className="flex flex-col text-start ml-5 pt-10">
+                            <h1
+                                className="text-xl lg:text-xl text-black"
+                                style={{ fontFamily: "'Happy Monkey', cursive" }}
+                            >
+                                <span className="text-[#6DC700]">Aktivitas Literasi</span>
+                            </h1>
+                            <p
+                                className="text-[14px] text-black"
+                                style={{ fontFamily: "'Hanken Grotesk', sans-serif" }}
+                            >
+                                Lorem ipsum dolor sit amet, consectetur adipiscing
+                            </p>
+                        </div>
+                        <div className="flex">
+                            <div className="max-w-xs ml-5 mt-5 mb-10 bg-white rounded-lg shadow-lg overflow-hidden">
+                                <div className="relative h-40 bg-gradient-to-br from-gray-700 to-gray-900">
+                                    <img
+                                        src="./aktivitas-literasi.jpeg"
+                                        alt="Event venue"
+                                        className="w-full h-full object-cover"
+                                    />
+                                </div>
+                                    <div className="p-3">
+                                        <h2 className="text-xl font-bold text-gray-900 mb-6 leading-tight">
+                                            Sosialisasi Dan Workshop Taman Bacaan
+                                        </h2>
 
-                                {/* Gradient hitam transparan di bawah gambar */}
-                                <div className="absolute bottom-0 left-0 w-full h-20 bg-gradient-to-t from-black/70 to-transparent"></div>
+                                        <div className="space-y-4">
+                                            <div className="flex items-center gap-1">
+                                                <div className="flex-shrink-0">
+                                                    <Mic className="w-5 h-5 text-gray-600" />
+                                                </div>
+                                                <span className="text-gray-700 text-sm">
+                                                    Dr. Abiel Yusuf, M.Pd
+                                                </span>
+                                            </div>
 
-                                {/* Nama penulis */}
-                                <p className="text-[17px] bg-[#6DC700] w-27 h-7 flex items-center justify-center -mt-20 rounded-2xl text-white relative z-[10]"
-                                    style={{ fontFamily: "'Hanken Grotesk', sans-serif" }}>
-                                    James Clear
-                                </p>
+                                            <div className="flex items-center gap-1">
+                                                <div className="flex-shrink-0">
+                                                    <Clock className="w-5 h-5 text-gray-600" />
+                                                </div>
+                                                <span className="text-gray-700 text-sm">
+                                                    22 November 2025, 09:00 - 16:00 WIB
+                                                </span>
+                                            </div>
 
-                                {/* Judul */}
-                                <h1 className="text-xl text-black" style={{ fontFamily: "'Happy Monkey', cursive" }}>
-                                    <span className="text-[#6DC700]">Atomic Habbits</span>
-                                </h1>
+                                            <div className="flex items-center gap-1">
+                                                <div className="flex-shrink-0">
+                                                    <MapPin className="w-5 h-5 text-gray-600" />
+                                                </div>
+                                                <span className="text-gray-700 text-sm">
+                                                    Pusat Dokumentasi Sastra HB Jassin
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                            </div>
+                            <div className="max-w-xs ml-5 mt-5 mb-10 bg-white rounded-lg shadow-lg overflow-hidden">
+                                <div className="relative h-40 bg-gradient-to-br from-gray-700 to-gray-900">
+                                    <img
+                                        src="./aktivitas-literasi.jpeg"
+                                        alt="Event venue"
+                                        className="w-full h-full object-cover"
+                                    />
+                                </div>
+                                    <div className="p-3">
+                                        <h2 className="text-xl font-bold text-gray-900 mb-6 leading-tight">
+                                            Sosialisasi Dan Workshop Taman Bacaan
+                                        </h2>
 
-                                {/* Tanggal */}
-                                <p className="text-[17px] text-[#B5830D] font-bold" style={{ fontFamily: "'Hanken Grotesk', sans-serif" }}>
-                                    1 October 2025
-                                </p>
+                                        <div className="space-y-4">
+                                            <div className="flex items-center gap-1">
+                                                <div className="flex-shrink-0">
+                                                    <Mic className="w-5 h-5 text-gray-600" />
+                                                </div>
+                                                <span className="text-gray-700 text-sm">
+                                                    Dr. Abiel Yusuf, M.Pd
+                                                </span>
+                                            </div>
+
+                                            <div className="flex items-center gap-1">
+                                                <div className="flex-shrink-0">
+                                                    <Clock className="w-5 h-5 text-gray-600" />
+                                                </div>
+                                                <span className="text-gray-700 text-sm">
+                                                    22 November 2025, 09:00 - 16:00 WIB
+                                                </span>
+                                            </div>
+
+                                            <div className="flex items-center gap-1">
+                                                <div className="flex-shrink-0">
+                                                    <MapPin className="w-5 h-5 text-gray-600" />
+                                                </div>
+                                                <span className="text-gray-700 text-sm">
+                                                    Pusat Dokumentasi Sastra HB Jassin
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
                             </div>
-                            <div className="flex flex-col items-center text center">
-                                <img src="./laskar-pelangi-book.png" alt="" />
-                                <p className="text-[17px] bg-[#6DC700] w-27 h-7 items-center flex justify-center -mt-20 rounded-2xl text-white" style={{ fontFamily: "'Hanken Grotesk', sans-serif" }}>
-                                    James Clear
-                                </p>
-                                <h1 className="text-xl text-black" style={{ fontFamily: "'Happy Monkey', cursive" }}>
-                                    <span className="text-[#6DC700]">Atomic Habbits</span>
-                                </h1>
-                                <p className="text-[17px] text-[#B5830D] font-bold" style={{ fontFamily: "'Hanken Grotesk', sans-serif" }}>
-                                    1 October 2025
-                                </p>
-                            </div>
-                            <div className="flex flex-col items-center text center">
-                                <img src="./sapiens-book.png" alt="" />
-                                <p className="text-[17px] bg-[#6DC700] w-27 h-7 items-center flex justify-center -mt-20 rounded-2xl text-white" style={{ fontFamily: "'Hanken Grotesk', sans-serif" }}>
-                                    James Clear
-                                </p>
-                                <h1 className="text-xl text-black" style={{ fontFamily: "'Happy Monkey', cursive" }}>
-                                    <span className="text-[#6DC700]">Atomic Habbits</span>
-                                </h1>
-                                <p className="text-[17px] text-[#B5830D] font-bold" style={{ fontFamily: "'Hanken Grotesk', sans-serif" }}>
-                                    1 October 2025
-                                </p>
-                            </div>
-                            <div className="flex flex-col items-center text center">
-                                <img src="./mariposa-book.png" alt="" />
-                                <p className="text-[17px] bg-[#6DC700] w-27 h-7 items-center flex justify-center -mt-20 rounded-2xl text-white" style={{ fontFamily: "'Hanken Grotesk', sans-serif" }}>
-                                    James Clear
-                                </p>
-                                <h1 className="text-xl text-black" style={{ fontFamily: "'Happy Monkey', cursive" }}>
-                                    <span className="text-[#6DC700]">Atomic Habbits</span>
-                                </h1>
-                                <p className="text-[17px] text-[#B5830D] font-bold" style={{ fontFamily: "'Hanken Grotesk', sans-serif" }}>
-                                    1 October 2025
-                                </p>
-                            </div>
-                            <div className="flex flex-col items-center text center">
-                                <img src="./five-feet-apart-book.png" alt="" />
-                                <p className="text-[17px] bg-[#6DC700] w-27 h-7 items-center flex justify-center -mt-20 rounded-2xl text-white" style={{ fontFamily: "'Hanken Grotesk', sans-serif" }}>
-                                    James Clear
-                                </p>
-                                <h1 className="text-xl text-black" style={{ fontFamily: "'Happy Monkey', cursive" }}>
-                                    <span className="text-[#6DC700]">Atomic Habbits</span>
-                                </h1>
-                                <p className="text-[17px] text-[#B5830D] font-bold" style={{ fontFamily: "'Hanken Grotesk', sans-serif" }}>
-                                    1 October 2025
-                                </p>
+                            <div className="max-w-xs ml-5 mt-5 mb-10 bg-white rounded-lg shadow-lg overflow-hidden">
+                                <div className="relative h-40 bg-gradient-to-br from-gray-700 to-gray-900">
+                                    <img
+                                        src="./aktivitas-literasi.jpeg"
+                                        alt="Event venue"
+                                        className="w-full h-full object-cover"
+                                    />
+                                </div>
+                                    <div className="p-3">
+                                        <h2 className="text-xl font-bold text-gray-900 mb-6 leading-tight">
+                                            Sosialisasi Dan Workshop Taman Bacaan
+                                        </h2>
+
+                                        <div className="space-y-4">
+                                            <div className="flex items-center gap-1">
+                                                <div className="flex-shrink-0">
+                                                    <Mic className="w-5 h-5 text-gray-600" />
+                                                </div>
+                                                <span className="text-gray-700 text-sm">
+                                                    Dr. Abiel Yusuf, M.Pd
+                                                </span>
+                                            </div>
+
+                                            <div className="flex items-center gap-1">
+                                                <div className="flex-shrink-0">
+                                                    <Clock className="w-5 h-5 text-gray-600" />
+                                                </div>
+                                                <span className="text-gray-700 text-sm">
+                                                    22 November 2025, 09:00 - 16:00 WIB
+                                                </span>
+                                            </div>
+
+                                            <div className="flex items-center gap-1">
+                                                <div className="flex-shrink-0">
+                                                    <MapPin className="w-5 h-5 text-gray-600" />
+                                                </div>
+                                                <span className="text-gray-700 text-sm">
+                                                    Pusat Dokumentasi Sastra HB Jassin
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
                             </div>
                         </div>
                     </section>
                 </div>
             </div>
+            <RightBar />
         </div>
     );
 }

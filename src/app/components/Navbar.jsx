@@ -7,9 +7,7 @@ export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <>
-            <link href="https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap" rel="stylesheet" />
-            
+        <>            
             <nav className="bg-white border-b border-gray-200 shadow-sm">
                 <div className=" mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex items-center justify-between h-16">
