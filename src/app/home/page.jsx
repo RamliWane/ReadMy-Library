@@ -13,7 +13,7 @@ export default function Home() {
                     src="/absurd-utama.png"
                     alt="Banner"
                 />
-                <div className="bg-white mt-2 w-full h-screen">
+                <div className="bg-white mt-2 w-full h-auto">
                     <section>
                         <div className="flex flex-col text-start ml-5 mt-4">
                             <h1
