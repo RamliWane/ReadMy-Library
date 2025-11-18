@@ -1,4 +1,5 @@
 import BookCard from "../components/BookCard";
+import HomeFooter from "../components/HomeFooter";
 import LiterasiAct from "../components/LiterasiAct";
 import RightBar from "../components/RightBar";
 import Sidebar from "../components/Sidebar";
@@ -56,6 +57,30 @@ export default function Home() {
                             <LiterasiAct />
                             <LiterasiAct />
                             <LiterasiAct />
+                        </div>
+
+                        <div className="flex flex-col text-start ml-5">
+                            <h1
+                                className="text-xl lg:text-xl text-black"
+                                style={{ fontFamily: "'Happy Monkey', cursive" }}
+                            >
+                                <span className="text-[#6DC700]">Aktivitas Literasi</span>
+                            </h1>
+                            <p
+                                className="text-[14px] text-black"
+                                style={{ fontFamily: "'Hanken Grotesk', sans-serif" }}
+                            >
+                                Lorem ipsum dolor sit amet, consectetur adipiscing
+                            </p>
+                        </div>
+                        <div className="flex">
+                            <LiterasiAct />
+                            <LiterasiAct />
+                            <LiterasiAct />
+                        </div>
+                        
+                        <div className="mb-10">
+                            <HomeFooter />
                         </div>
                     </section>
                 </div>
