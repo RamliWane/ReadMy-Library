@@ -11,7 +11,7 @@ export default function detail (){
         <section>
             <div className="flex bg-[#ECF4E8]">
                 <Sidebar />
-                <div className="bg-white mt-2 w-full h-auto">
+                <div className="bg-white mt-2 w-full h-auto m-2">
                     <section>
                         <div className="flex flex-col flex-wrap">
                             <div className="flex flex-col text-start ml-5 mt-4">
@@ -38,7 +38,7 @@ export default function detail (){
                             <hr className="border-t border-black my-4 m-5" />
                         </div>
                     </section>
-                    <div className="flex flex-wrap gap-3 p-3">
+                    <div className="flex flex-wrap gap-3 pl-2">
                         <BookCard />
                         <BookCard />
                         <BookCard />

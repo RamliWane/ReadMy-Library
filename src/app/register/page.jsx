@@ -73,6 +73,13 @@ const Register = () => {
                                     </button>
                                 </div>
                             </div>
+                            <button
+                                type="submit"
+                                className="w-full bg-[#9E8D6E] text-white py-3 rounded-lg font-medium hover:bg-amber-800 transition-colors"
+                            >
+                                Sign Up
+                            </button>
+
                         </form>
 
                             <div className="flex justify-between items-center text-sm">
@@ -84,13 +91,6 @@ const Register = () => {
                                     Sign In
                                 </a>
                             </div>
-
-                            <button
-                                type="submit"
-                                className="w-full bg-[#9E8D6E] text-white py-3 rounded-lg font-medium hover:bg-amber-800 transition-colors"
-                            >
-                                Sign Up
-                            </button>
 
                             <div className="flex items-center gap-3 my-6">
                                 <div className="flex-1 h-px bg-gray-300"></div>

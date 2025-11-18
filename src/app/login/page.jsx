@@ -4,8 +4,8 @@
 
 import React, { useState } from 'react';
 import { Eye, EyeOff } from 'lucide-react';
-import { useRouter } from 'next/navigation'; // ✅ tambahkan baris ini
-import { signIn } from 'next-auth/react'; // ✅ tambahkan ini juga kalau belum
+import { useRouter } from 'next/navigation'; 
+import { signIn } from 'next-auth/react';
 
 
 const Form = () => {
@@ -29,11 +29,10 @@ const Form = () => {
         const role = data?.user?.role;
 
         if (role !== 'admin') {
-            redirect('/');
+            router.push('/home');
         } else {
-            redirect('/dashboard');
+            router.push('/katalog');
         }
-
     }
 
     const [showPassword, setShowPassword] = useState(false);
@@ -53,13 +52,6 @@ const Form = () => {
 
                     <div className="space-y-4">
                         <form action={handleLogin} className="space-y-4">
-                            <input
-                                type="text"
-                                id="username"
-                                name="username"
-                                placeholder="Enter Your Name"
-                                className="w-full px-4 py-3 text-black border border-gray-300 rounded-lg focus:outline-none focus:border-gray-400"
-                            />
 
                             <input
                                 type="email"
@@ -102,6 +94,9 @@ const Form = () => {
                                     </button>
                                 </div>
                             </div>
+                            <button type="submit" className="w-full bg-[#9E8D6E] text-white py-3 rounded-lg font-medium hover:bg-amber-800 transition-colors">
+                                Sign In
+                            </button>
                         </form>
 
 
@@ -113,10 +108,6 @@ const Form = () => {
                                     </button>
                                 </a>
                             </div>
-
-                            <button type="submit" className="w-full bg-[#9E8D6E] text-white py-3 rounded-lg font-medium hover:bg-amber-800 transition-colors">
-                                Sign In
-                            </button>
 
                             <div className="flex items-center gap-3 my-6">
                                 <div className="flex-1 h-px bg-gray-300"></div>
