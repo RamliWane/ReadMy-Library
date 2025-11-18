@@ -1,0 +1,39 @@
+import FilterBook from "../components/FilterBook";
+import Sidebar from "../components/Sidebar";
+
+export default function detail (){
+    return(
+        <section>
+            <div className="flex bg-[#ECF4E8]">
+                <Sidebar />
+                <div className="bg-white mt-2 w-full h-auto">
+                    <section>
+                        <div className="flex flex-col flex-wrap">
+                            <div className="flex flex-col text-start ml-5 mt-4">
+                                <h1
+                                    className="text-xl lg:text-xl text-black"
+                                    style={{ fontFamily: "'Happy Monkey', cursive" }}
+                                >
+                                    <span className="text-[#6DC700]">Recomended For You</span>
+                                </h1>
+                
+                                <p
+                                    className="text-[14px] text-black"
+                                    style={{ fontFamily: "'Hanken Grotesk', sans-serif" }}
+                                >
+                                Lorem ipsum dolor sit amet, consectetur adipiscing
+                                </p>
+                            </div>
+                            <div className="pl-5">
+                            <FilterBook />
+                            </div>
+                            <div className="pl-5">
+                            <FilterBook />
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </section>
+    )
+}

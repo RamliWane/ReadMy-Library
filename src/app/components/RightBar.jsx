@@ -11,11 +11,11 @@ export default function AuthorSidebar() {
 
   return (
     <div className="sticky top-0 h-screen flex w-full max-w-[18rem] flex-col bg-white p-3 text-gray-700 border">
-      <div className="p-6 pb-4">
+      <div className="p-1 pb-4">
         <h2 className="text-2xl font-bold text-gray-800">Author</h2>
       </div>      
 
-      <div className="px-6 pb-4">
+      <div className="px-6 pb-2">
         <div className="flex items-center gap-2 mb-4">
           <Users className="w-5 h-5 text-green-600" />
           <span className="text-sm font-bold text-gray-800">Popular Authors</span>
