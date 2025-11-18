@@ -1,5 +1,9 @@
 import FilterBook from "../components/FilterBook";
 import Sidebar from "../components/Sidebar";
+import RightBar from "../components/RightBar";
+import SearcBar from "../components/SearchBar";
+import BookCard from "../components/BookCard";
+
 
 export default function detail (){
     return(
@@ -25,14 +29,24 @@ export default function detail (){
                                 </p>
                             </div>
                             <div className="pl-5">
-                            <FilterBook />
+                            <SearcBar />
                             </div>
                             <div className="pl-5">
                             <FilterBook />
                             </div>
+                            <hr className="border-t border-black my-4 m-5" />
                         </div>
                     </section>
+                    <div className="flex flex-wrap gap-3 p-3">
+                        <BookCard />
+                        <BookCard />
+                        <BookCard />
+                        <BookCard />
+                        <BookCard />
+                        <BookCard />
+                    </div>
                 </div>
+                <RightBar />
             </div>
         </section>
     )

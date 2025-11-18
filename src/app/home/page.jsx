@@ -1,4 +1,5 @@
 import BookCard from "../components/BookCard";
+import FilterActivity from "../components/FilterActivity";
 import FilterBook from "../components/FilterBook";
 import HomeFooter from "../components/HomeFooter";
 import LiterasiAct from "../components/LiterasiAct";
@@ -45,19 +46,25 @@ export default function Home() {
                             <BookCard />
                             <BookCard />
                         </div>
-                        <div className="flex flex-col text-start ml-5 pt-10">
-                            <h1
-                                className="text-xl lg:text-xl text-black"
-                                style={{ fontFamily: "'Happy Monkey', cursive" }}
-                            >
-                                <span className="text-[#6DC700]">Aktivitas Literasi</span>
-                            </h1>
-                            <p
-                                className="text-[14px] text-black"
-                                style={{ fontFamily: "'Hanken Grotesk', sans-serif" }}
-                            >
-                                Lorem ipsum dolor sit amet, consectetur adipiscing
-                            </p>
+                        <div className="flex justify-between flex-wrap mt-6">
+                            <div className="flex flex-col text-start ml-5 mt-4">
+                                <h1
+                                    className="text-xl lg:text-xl text-black"
+                                    style={{ fontFamily: "'Happy Monkey', cursive" }}
+                                >
+                                    <span className="text-[#6DC700]">Aktivitas Literasi</span>
+                                </h1>
+
+                                <p
+                                    className="text-[14px] text-black"
+                                    style={{ fontFamily: "'Hanken Grotesk', sans-serif" }}
+                                >
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing
+                                </p>
+                            </div>
+                            <div>
+                                <FilterActivity />
+                            </div>
                         </div>
                         <div className="flex flex-wrap">
                             <LiterasiAct />
