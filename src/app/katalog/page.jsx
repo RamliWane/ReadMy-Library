@@ -3,6 +3,7 @@ import Sidebar from "../components/Sidebar";
 import RightBar from "../components/RightBar";
 import SearcBar from "../components/SearchBar";
 import BookCard from "../components/BookCard";
+import HomeFooter from "../components/HomeFooter";
 
 
 export default function detail (){
@@ -18,7 +19,7 @@ export default function detail (){
                                     className="text-xl lg:text-xl text-black"
                                     style={{ fontFamily: "'Happy Monkey', cursive" }}
                                 >
-                                    <span className="text-[#6DC700]">Recomended For You</span>
+                                    <span className="text-[#6DC700]">Semua Buku</span>
                                 </h1>
                 
                                 <p
@@ -44,6 +45,9 @@ export default function detail (){
                         <BookCard />
                         <BookCard />
                         <BookCard />
+                    </div>
+                    <div className="mb-10">
+                        <HomeFooter />
                     </div>
                 </div>
                 <RightBar />

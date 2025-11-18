@@ -23,7 +23,7 @@ export default function Sidebar() {
                                 </svg>
                             </div>
                             <p className="block mr-auto font-sans text-base antialiased font-normal leading-relaxed text-blue-gray-900">
-                                Dashboard
+                                Beranda
                             </p>
                             <span className="ml-4">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none"
@@ -39,34 +39,6 @@ export default function Sidebar() {
                     <div className="overflow-hidden">
                         <div className="block w-full py-1 text-sm font-light text-gray-700">
                             <nav className="flex min-w-[240px] flex-col gap-1 p-0">
-
-                                <div role="button"
-                                    className="flex items-center w-full p-3 transition-all rounded-lg hover:bg-blue-gray-50 hover:text-blue-gray-900">
-                                    <div className="grid mr-4 place-items-center">
-                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none"
-                                            viewBox="0 0 24 24" strokeWidth="3" stroke="currentColor"
-                                            className="w-5 h-3">
-                                            <path strokeLinecap="round"
-                                                strokeLinejoin="round"
-                                                d="M8.25 4.5l7.5 7.5-7.5 7.5"></path>
-                                        </svg>
-                                    </div>
-                                    Analytics
-                                </div>
-
-                                <div role="button"
-                                    className="flex items-center w-full p-3 transition-all rounded-lg hover:bg-blue-gray-50 hover:text-blue-gray-900">
-                                    <div className="grid mr-4 place-items-center">
-                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none"
-                                            viewBox="0 0 24 24" strokeWidth="3" stroke="currentColor"
-                                            className="w-5 h-3">
-                                            <path strokeLinecap="round"
-                                                strokeLinejoin="round"
-                                                d="M8.25 4.5l7.5 7.5-7.5 7.5"></path>
-                                        </svg>
-                                    </div>
-                                    Reporting
-                                </div>
 
                                 <div role="button"
                                     className="flex items-center w-full p-3 transition-all rounded-lg hover:bg-blue-gray-50 hover:text-blue-gray-900">
@@ -101,7 +73,7 @@ export default function Sidebar() {
                                 </svg>
                             </div>
                             <p className="mr-auto text-base text-blue-gray-900">
-                                E-Commerce
+                                Katalog Buku
                             </p>
                             <span className="ml-4">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none"
@@ -112,42 +84,6 @@ export default function Sidebar() {
                                 </svg>
                             </span>
                         </button>
-                    </div>
-
-                    <div className="overflow-hidden">
-                        <div className="block w-full py-1 text-sm font-light text-gray-700">
-                            <nav className="flex min-w-[240px] flex-col gap-1 p-0">
-
-                                <div role="button"
-                                    className="flex items-center w-full p-3 transition-all rounded-lg hover:bg-blue-gray-50 hover:text-blue-gray-900">
-                                    <div className="grid mr-4 place-items-center">
-                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none"
-                                            viewBox="0 0 24 24" strokeWidth="3" stroke="currentColor"
-                                            className="w-5 h-3">
-                                            <path strokeLinecap="round"
-                                                strokeLinejoin="round"
-                                                d="M8.25 4.5l7.5 7.5-7.5 7.5"></path>
-                                        </svg>
-                                    </div>
-                                    Orders
-                                </div>
-
-                                <div role="button"
-                                    className="flex items-center w-full p-3 transition-all rounded-lg hover:bg-blue-gray-50 hover:text-blue-gray-900">
-                                    <div className="grid mr-4 place-items-center">
-                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none"
-                                            viewBox="0 0 24 24" strokeWidth="3" stroke="currentColor"
-                                            className="w-5 h-3">
-                                            <path strokeLinecap="round"
-                                                strokeLinejoin="round"
-                                                d="M8.25 4.5l7.5 7.5-7.5 7.5"></path>
-                                        </svg>
-                                    </div>
-                                    Products
-                                </div>
-
-                            </nav>
-                        </div>
                     </div>
                 </div>
 
