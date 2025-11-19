@@ -1,9 +1,7 @@
 import Sidebar from "../components/Sidebar";
 import RightBar from "../components/RightBar";
-import SearcBar from "../components/SearchBar";
-import FilterBook from "../components/FilterBook";
 import BookCard from "../components/BookCard";
-import HomeFooter from "../components/HomeFooter";
+import BorrowButton from "../components/BorrowButton";
 
 
 
@@ -25,24 +23,22 @@ export default function Detail() {
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, brsed do <br />eiusmod tempor incididunt ut labore et dolore magna aliqua. <br />Ut enim ad minim veniam
                                 </p>
                                 <div className="flex items-center justify-between gap-2 pt-10">
-                                    <button className="px-4 py-2 bg-white border text-black text-sm rounded-md hover:bg-[#6DC700] transition-colors">
-                                        Pinjam
-                                    </button>
+                                    <BorrowButton />
                                     <div className="flex gap-5">
-                                        <button className="p-2 bg-gray-100 rounded-md hover:bg-gray-200 transition-colors">
-                                            <svg className="w-4 h-4 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <button className="p-2 bg-gray-100 rounded-md hover:bg-gray-200 transition-transform duration-300 hover:-translate-y-2 cursor-pointer">
+                                            <svg className="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z" />
                                             </svg>
                                         </button>
 
-                                        <button className="p-2 bg-gray-100 rounded-md hover:bg-gray-200 transition-colors">
-                                            <svg className="w-4 h-4 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <button className="p-2 bg-gray-100 rounded-md hover:bg-gray-200 transition-colors  transition-transform duration-300 hover:-translate-y-2 cursor-pointer">
+                                            <svg className="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" />
                                             </svg>
                                         </button>
                                     </div>
                                 </div>
-                                <hr className="border-t border-gray-500 my-4" />
+                                <hr className="border-t border-gray-500" />
                             </div>
                         </div>
 
@@ -75,7 +71,7 @@ export default function Detail() {
                             </div>
                         </div>
 
-                        <div className="bg-[#CCC5B8] m-2">
+                        <div className="bg-[#CCC5B8] m-2 rounded-lg">
                             <div className="flex justify-center items-center lg:gap-10 flex-wrap p-5">
                                 <div className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm w-80">
                                     <h2 className="text-lg font-semibold text-[#6DC700] mb-4" style={{ fontFamily: "'Hanken Grotesk', sans-serif" }}>
