@@ -6,7 +6,7 @@ import BookCard from "../components/BookCard";
 import HomeFooter from "../components/HomeFooter";
 
 
-export default function detail (){
+export default function Katalog (){
     return(
         <section>
             <div className="flex bg-[#ECF4E8]">

@@ -4,8 +4,8 @@
 
 import React, { useState } from 'react';
 import { Eye, EyeOff } from 'lucide-react';
-import { useRouter } from 'next/navigation'; 
 import { signIn } from 'next-auth/react';
+import { redirect, useRouter } from 'next/navigation';
 
 
 const Form = () => {
@@ -29,9 +29,9 @@ const Form = () => {
         const role = data?.user?.role;
 
         if (role !== 'admin') {
-            router.push('/home');
-        } else {
-            router.push('/katalog');
+        redirect('/home');
+        }else {
+        redirect('/dashboard');
         }
     }
 
