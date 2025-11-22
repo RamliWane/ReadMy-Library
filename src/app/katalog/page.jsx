@@ -40,11 +40,6 @@ export default function Katalog (){
                     </section>
                     <div className="flex flex-wrap gap-3 pl-2">
                         <BookCard />
-                        <BookCard />
-                        <BookCard />
-                        <BookCard />
-                        <BookCard />
-                        <BookCard />
                     </div>
                     <div className="mb-10">
                         <HomeFooter />

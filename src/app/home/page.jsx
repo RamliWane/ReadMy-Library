@@ -39,13 +39,9 @@ export default function Home() {
                             </div>
                         </div>
 
-                        <div className="flex flex-wrap items-center justify-center gap-2 mt-5">
-                            <BookCard />
-                            <BookCard />
-                            <BookCard />
-                            <BookCard />
-                            <BookCard />
-                        </div>
+                            <div className="flex flex-wrap items-center justify-center gap-2 mt-5">
+                                <BookCard />
+                            </div>
                         <div className="flex justify-between flex-wrap mt-6">
                             <div className="flex flex-col text-start ml-5 mt-4">
                                 <h1
