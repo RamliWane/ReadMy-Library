@@ -1,3 +1,5 @@
+//app/components/InputBook.jsx
+
 export default function InputBook() {
     return (
         <div className="bg-white/80 backdrop-blur-sm p-6 md:p-8 rounded-3xl shadow-xl border border-white/20 hover:shadow-2xl transition-all duration-300">
