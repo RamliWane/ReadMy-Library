@@ -65,7 +65,7 @@ export default function SidebarAdmin() {
                     <div className="relative block w-full">
                         <div role="button"
                             className="flex items-center w-full p-0 leading-tight transition-all rounded-lg hover:bg-blue-gray-50 hover:text-blue-gray-900">
-                            <a href="./katalog" onClick={() => setIsOpen(false)}>
+                            <a href="./tambahbuku" onClick={() => setIsOpen(false)}>
                                 <button type="button"
                                     className="flex cursor-pointer items-center justify-between w-full p-3 font-sans text-xl antialiased font-semibold">
                                     <div className="grid mr-4 place-items-center">
@@ -77,7 +77,7 @@ export default function SidebarAdmin() {
                                         </svg>
                                     </div>
                                     <p className="mr-auto text-base text-blue-gray-900">
-                                        Katalog Buku
+                                        Tambah Buku
                                     </p>
                                 </button>
                             </a>
@@ -95,7 +95,7 @@ export default function SidebarAdmin() {
                                     clipRule="evenodd"></path>
                             </svg>
                         </div>
-                        Inbox
+                        Ajuan Pinjam
                     </div>
 
                     <div role="button"
@@ -109,7 +109,7 @@ export default function SidebarAdmin() {
                                     clipRule="evenodd"></path>
                             </svg>
                         </div>
-                        Setting
+                        Sedang Minjam
                     </div>
 
                     <a href="./profile" onClick={() => setIsOpen(false)}>

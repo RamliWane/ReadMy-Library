@@ -5,19 +5,22 @@ export default function FilterBook() {
                 Semua
             </button>
             <button className="px-3 py-1 bg-white text-gray-700 text-sm rounded-md border border-gray-300 hover:bg-gray-50 transition-colors">
-                Novel
+                Fiksi
             </button>
             <button className="px-3 py-1 bg-white text-gray-700 text-sm rounded-md border border-gray-300 hover:bg-gray-50 transition-colors">
-                Komik
+                Sejarah
             </button>
             <button className="px-3 py-1 bg-white text-gray-700 text-sm rounded-md border border-gray-300 hover:bg-gray-50 transition-colors">
-                Majalah
+                Romance
             </button>
             <button className="px-3 py-1 bg-white text-gray-700 text-sm rounded-md border border-gray-300 hover:bg-gray-50 transition-colors">
-                Majalah
+                Religi
             </button>
             <button className="px-3 py-1 bg-white text-gray-700 text-sm rounded-md border border-gray-300 hover:bg-gray-50 transition-colors">
-                Majalah
+                Horror
+            </button>
+            <button className="px-3 py-1 bg-white text-gray-700 text-sm rounded-md border border-gray-300 hover:bg-gray-50 transition-colors">
+                Inspirasi
             </button>
         </div>
     )
