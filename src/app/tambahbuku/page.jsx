@@ -7,42 +7,24 @@ import { redirect } from "next/navigation";
 import { authOptions } from "../api/auth/[...nextauth]/route";
 
 export default async function TambahBukuPage() {
-        const session = await getServerSession(authOptions);
-        console.log(session);
-    
-        const user = session?.user;
-    
-        if (session.user.role !== "admin") {
-          redirect("/forbidden");
-        }
+    const session = await getServerSession(authOptions);
+
+    if (!session || session.user.role !== "admin") {
+        redirect("/forbidden");
+    }
+
     return (
-        <section>
-            <div className="flex bg-[#ECF4E8]"> 
-                <SidebarAdmin />
-                
-                <div className="flex flex-col p-3 md:p-5 flex-1 w-full overflow-x-hidden">
-                    <div className="flex flex-col text-start md:ml-5">
-                        <h1 className="text-lg md:text-xl lg:text-2xl text-black">
-                            <span className="text-[#6DC700]">Semua Buku</span>
-                        </h1>
-        
-                        <p className="text-xs md:text-sm text-black">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing
-                        </p>
-                    </div>
-        
-                    <hr className="border-t border-black my-3 md:my-4 md:mx-5" />
-        
-                    <div className="flex flex-col lg:flex-row gap-3 md:gap-5 md:px-5">
-                        <div className="flex-1 w-full">
-                            <InputBook />
-                        </div>
-                        <div className="flex-1 w-full flex flex-col gap-3 md:gap-5">
-                            <BookStats />
-                        </div>
-                    </div>
+       <SidebarAdmin>
+            <div className="flex flex-col">
+                <h1 className="text-2xl text-[#6DC700]">Semua Buku</h1>
+
+                <hr className="my-4 border-black" />
+
+                <div className="flex flex-col lg:flex-row gap-5">
+                    <InputBook />
+                    <BookStats />
                 </div>
             </div>
-        </section>
-    )
+        </SidebarAdmin>
+    );
 }

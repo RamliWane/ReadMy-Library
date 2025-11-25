@@ -2,7 +2,7 @@
 
 export default function BorrowPending() {
     return (
-        <div className="bg-white/80 backdrop-blur-sm p-4 rounded-3xl shadow-xl border border-white/20 hover:shadow-2xl transition-all duration-300 lg:col-span-2">
+        <div className="bg-white/80 backdrop-blur-sm p-4 rounded-3xl shadow-xl border border-white/20 transition-all duration-300 lg:col-span-2">
           <div className="flex items-center gap-3 mb-6">
             <div className="w-12 h-12 bg-gradient-to-br from-amber-500 to-orange-600 rounded-2xl flex items-center justify-center shadow-lg">
               <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
