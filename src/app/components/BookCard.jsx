@@ -14,9 +14,9 @@ export default async function BookCard(){
                 <a 
                     href={`/detail?id=${item.id}`} 
                     key={item.id || item.judul_buku}
-                    className="relative flex-shrink-0 w-full sm:w-[180px] md:w-[200px] lg:w-[220px]"
+                    className="relative w-full sm:w-[180px] md:w-[200px] lg:w-[220px]"
                 >
-                    <div className="w-full h-[280px] sm:h-[300px] md:h-[320px] rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <div className="w-full h-[280px] sm:h-[300px] rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
                         <img 
                             src={item.gambar} 
                             alt={item.judul_buku} 

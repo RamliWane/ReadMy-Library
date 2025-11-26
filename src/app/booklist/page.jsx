@@ -4,6 +4,7 @@ import BookList from "../components/admin/BookList"
 import { getServerSession } from "next-auth/next";
 import { redirect } from "next/navigation";
 import { authOptions } from "../api/auth/[...nextauth]/route";
+import { Delete } from "lucide-react";
 export default async function BookListPage() {
 
     const session = await getServerSession(authOptions);
@@ -17,8 +18,8 @@ export default async function BookListPage() {
 
     return (
         <SidebarAdmin>
-            <div className="flex flex-col p-3 md:p-5 flex-1 w-full overflow-x-hidden">
-                <div className="flex flex-col text-start items-center justify-center md:ml-5 p-1 rounded-xl bg-white max-w-sm mb-4">
+            <div className="flex flex-col md:p-5 flex-1 w-full overflow-x-hidden">
+                <div className="flex flex-col text-start items-center justify-center md:ml-5 p-3 rounded-xl bg-white max-w-sm mb-4">
                     <h1 className="text-lg md:text-xl lg:text-2xl text-black">
                         <span className="text-[#6DC700]" style={{ fontFamily: "'Happy Monkey', cursive" }}>Semua Buku</span>
                     </h1>
