@@ -4,6 +4,7 @@ import SidebarAdmin from '../components/admin/SidebarAdmin';
 import { getServerSession } from "next-auth/next";
 import { redirect } from "next/navigation";
 import { authOptions } from "../api/auth/[...nextauth]/route";
+import InputBook from '../components/admin/InputBook';
   
 export default async function DashboardPerpustakaan() {
     
@@ -16,12 +17,16 @@ export default async function DashboardPerpustakaan() {
   
   return (
     <SidebarAdmin>
-          <div className="flex">
+        <div className="flex">
+          <div className='flex flex-col gap-2'>
+            <div className='bg-white p-1 max-w-sm flex items-center justify-center rounded-lg shadow'>
+              <h1 className='text-black text-2xl' style={{ fontFamily: "'Happy Monkey', cursive" }}>Dashboard Perpustakaan</h1>
+            </div>
+            <InputBook />
+          </div>
         <div className="p-8">
-          <h2 className="text-2xl font-bold text-slate-800 mb-6">Dashboard</h2>
-
           {/* Stats Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+          <div className="grid grid-cols-1 mt-5 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
             <div className="bg-white p-6 rounded-xl shadow-sm">
               <div className="flex items-center justify-between mb-4">
                 <div className="p-3 bg-blue-100 rounded-lg">

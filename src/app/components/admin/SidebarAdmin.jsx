@@ -18,12 +18,8 @@ export default function SideBarAdmin({ children }) {
                         <span className="font-medium">Beranda</span>
                     </a>
                     <a href="./dashboard" className="flex items-center gap-3 px-4 py-3 bg-blue-50 text-blue-600 rounded-lg">
-                        <Home className="w-5 h-5" />
-                        <span className="font-medium">Dashboard</span>
-                    </a>
-                    <a href="./tambahbuku" className="flex items-center gap-3 px-4 py-3 text-slate-600 hover:bg-slate-50 rounded-lg">
                         <Book className="w-5 h-5" />
-                        <span>Tambah Buku</span>
+                        <span className="font-medium">Dashboard</span>
                     </a>
                     <a href="./borrowpending" className="flex items-center gap-3 px-4 py-3 text-slate-600 hover:bg-slate-50 rounded-lg">
                         <Users className="w-5 h-5" />
