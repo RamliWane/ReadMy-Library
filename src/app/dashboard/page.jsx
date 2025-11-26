@@ -20,7 +20,7 @@ export default async function DashboardPerpustakaan() {
         <div className="flex">
           <div className='flex flex-col gap-2'>
             <div className='bg-white p-1 max-w-sm flex items-center justify-center rounded-lg shadow'>
-              <h1 className='text-black text-2xl' style={{ fontFamily: "'Happy Monkey', cursive" }}>Dashboard Perpustakaan</h1>
+              <h1 className='text-[#6DC700] text-2xl' style={{ fontFamily: "'Happy Monkey', cursive" }}>Dashboard Perpustakaan</h1>
             </div>
             <InputBook />
           </div>

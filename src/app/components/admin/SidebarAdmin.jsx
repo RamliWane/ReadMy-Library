@@ -7,7 +7,7 @@ export default function SideBarAdmin({ children }) {
             <div className="w-64 bg-white shadow-lg flex flex-col">
                 <div className="p-6">
                     <div className="flex items-center gap-2">
-                        <Book className="w-8 h-8 text-blue-600" />
+                        <Book className="w-8 h-8 text-[#6DC700]" />
                         <h1 className="text-xl font-bold text-slate-800">Perpustakaan</h1>
                     </div>
                 </div>
@@ -17,7 +17,7 @@ export default function SideBarAdmin({ children }) {
                         <Home className="w-5 h-5" />
                         <span className="font-medium">Beranda</span>
                     </a>
-                    <a href="./dashboard" className="flex items-center gap-3 px-4 py-3 bg-blue-50 text-blue-600 rounded-lg">
+                    <a href="./dashboard" className="flex items-center gap-3 px-4 py-2 bg-[#6DC700] text-white rounded-lg">
                         <Book className="w-5 h-5" />
                         <span className="font-medium">Dashboard</span>
                     </a>
