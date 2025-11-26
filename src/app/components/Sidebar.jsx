@@ -1,20 +1,24 @@
+// component/Sidebar.jsx
 "use client";
+
 import { useState } from "react";
 import { Search, Book, Users, BookOpen, Menu, Bell, User, Home, Settings, LogOut } from 'lucide-react';
 
-export default function Sidebar({ children }) {
+export default function Sidebar({ children, users }) { // Terima users sebagai props
   const [isOpen, setIsOpen] = useState(false);
+  
+  // Ambil user pertama atau sesuaikan logika Anda
+  const currentUser = users?.[0] || { username: "Guest", role: "User" };
 
   return (
     <div className="flex min-h-screen bg-[#ECF4E8] overflow-hidden">
-
       {/* Sidebar */}
       <aside
         className={`
           fixed z-20 top-0 left-0 h-full w-64 bg-white shadow-lg flex flex-col justify-between
           transform transition-all duration-300
           ${isOpen ? "translate-x-0" : "-translate-x-full"}
-          lg:translate-x-0   /* desktop always visible */
+          lg:translate-x-0
         `}
       >
         <div>
@@ -53,7 +57,7 @@ export default function Sidebar({ children }) {
         </div>
       </aside>
 
-      {/* Overlay (HP only) */}
+      {/* Overlay */}
       {isOpen && (
         <div
           className="fixed inset-0 bg-black/40 z-10 lg:hidden"
@@ -63,13 +67,10 @@ export default function Sidebar({ children }) {
 
       {/* Main Content */}
       <main className="flex-1 flex flex-col overflow-hidden lg:pl-60 pt-10">
-
         {/* Topbar */}
         <header className="fixed z-10 top-0 left-0 w-full bg-white shadow-sm">
           <div className="flex items-center justify-between px-8 py-4">
             <div className="flex items-center gap-4">
-
-              {/* Hamburger button */}
               <button
                 className="lg:hidden"
                 onClick={() => setIsOpen(true)}
@@ -86,8 +87,8 @@ export default function Sidebar({ children }) {
 
               <div className="flex items-center gap-3">
                 <div className="text-right">
-                  <p className="text-sm font-medium text-slate-800">Pengguna</p>
-                  <p className="text-xs text-slate-500">Admin/Pengguna</p>
+                  <p className="text-sm font-medium text-slate-800">{currentUser.username}</p>
+                  <p className="text-xs text-slate-500">{currentUser.role}</p>
                 </div>
                 <div className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center">
                   <User className="w-6 h-6 text-white" />
@@ -100,7 +101,6 @@ export default function Sidebar({ children }) {
         <div className="flex-1 overflow-y-auto p-4">
           {children}
         </div>
-
       </main>
     </div>
   );

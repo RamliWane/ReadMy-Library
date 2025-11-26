@@ -33,6 +33,10 @@ export default function SideBarAdmin({ children }) {
                         <BookOpen className="w-5 h-5" />
                         <span>Peminjaman</span>
                     </a>
+                    <a href="./booklist" className="flex items-center gap-3 px-4 py-3 text-slate-600 hover:bg-slate-50 rounded-lg">
+                        <BookOpen className="w-5 h-5" />
+                        <span>Book List</span>
+                    </a>
                     <a className="flex items-center gap-3 px-4 py-3 text-slate-600 hover:bg-slate-50 rounded-lg">
                         <Settings className="w-5 h-5" />
                         <span>Pengaturan</span>

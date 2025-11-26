@@ -31,7 +31,7 @@ export default function Detail() {
                 <section className="bg-gradient-to-br from-gray-50 to-white">
                     <div className="max-w-7xl mx-auto px-6 py-12 lg:py-16">
                         <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-start">
-                            =                                <div className="flex-shrink-0 w-full lg:w-auto flex justify-center lg:justify-start">
+                            <div className="flex-shrink-0 w-full lg:w-auto flex justify-center lg:justify-start">
                                 <img
                                     className="w-64 h-96 object-cover rounded-lg shadow-2xl transform transition-transform hover:scale-105 duration-300"
                                     src={book.gambar}

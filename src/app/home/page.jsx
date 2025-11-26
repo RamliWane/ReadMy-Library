@@ -1,3 +1,4 @@
+
 import BookCard from "../components/BookCard";
 import FilterActivity from "../components/FilterActivity";
 import FilterBook from "../components/FilterBook";
@@ -6,9 +7,16 @@ import LiterasiAct from "../components/LiterasiAct";
 import RightBar from "../components/RightBar";
 import Sidebar from "../components/Sidebar";
 
-export default function Home() {
+export default async function HomePage() {
+  const users = await fetch("http://localhost:5000/users", {
+    method: "GET",
+    cache: "no-store",
+  })
+    .then(res => res.json())
+    .then(data => data.data);
+
     return (
-            <Sidebar>
+            <Sidebar users={users}>
                 <div className="">
                     <div className="flex-1 flex-wrap items-center lg:p-4">
                         <div className="flex items-center lg:pl-8 lg:pt-3">

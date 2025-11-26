@@ -1,7 +1,6 @@
 import React from "react";
 
 export default async function BookCard(){
-     // FETCH DATA KE BACKEND
     const books = await fetch("http://localhost:5000/buku", {
         method: "GET",
         cache: "no-store",
@@ -11,7 +10,7 @@ export default async function BookCard(){
     
     return(
         <>
-            {books?.slice(0, 10).map(item => (
+            {books?.map(item => (
                 <a 
                     href={`/detail?id=${item.id}`} 
                     key={item.id || item.judul_buku}
