@@ -1,4 +1,3 @@
-
 import { Imprima } from "next/font/google";
 import BookCard from "../components/BookCard";
 import FilterActivity from "../components/FilterActivity";
@@ -8,6 +7,8 @@ import LiterasiAct from "../components/LiterasiAct";
 import RightBar from "../components/RightBar";
 import Sidebar from "../components/Sidebar";
 import PopularBookCard from "../components/PopularBookCard";
+import NewReleaseBook from "../components/NewReleaseBook";
+
 export default async function HomePage() {
     const users = await fetch("http://localhost:5000/users", {
         method: "GET",
@@ -17,27 +18,13 @@ export default async function HomePage() {
         .then(data => data.data);
 
     return (
-        <Sidebar users={users}>
-            <div className="">
+        <div className="flex w-full min-h-screen bg-gray-50">
+            <Sidebar users={users}>
                 <div className="flex-1 flex-wrap items-center lg:p-4">
-                    <div className="flex items-center lg:pl-8 lg:pt-3">
-                        <img
-                            className="w-auto rounded-2xl max-w-6xl"
-                            src="/absurd-utama-2.png"
-                            alt="Banner"
-                        />
-                    </div>
-                    <div className=" flex bg-white mt-2 w-screen lg:w-full md:w-full h-auto rounded-xl overflow-hidden">
-                        <section className="flex-1">
-                            <div className="flex justify-between flex-wrap">
-                                <div>
-                                    <FilterBook />
-                                </div>
-
-                            </div>
-                            <hr className="border-t border-black my-4 mx-5" />
+                    <div className="flex bg-white mt-2 w-full h-auto rounded-xl overflow-hidden">
+                        <section className="w-full">
                             <div className="flex items-start justify-center">
-                                <div className="flex flex-col">
+                                <div className="w-full">
                                     <div className="lg:pl-12 md:pl-12 pl-5">
                                         <h1
                                             className="text-xl lg:text-xl text-black"
@@ -53,12 +40,21 @@ export default async function HomePage() {
                                             Lorem ipsum dolor sit amet, consectetur adipiscing
                                         </p>
                                     </div>
-                                    <div className="flex flex-wrap justify-center gap-3 mt-5">
-                                        <BookCard />
-                                    </div>
+                                    <NewReleaseBook />
                                 </div>
+                            </div>
+                        </section>
+                    </div>
 
-                                <div className="flex flex-col text-start ml-5 mt-4">
+
+
+
+                    <div className=" flex bg-white mt-2 w-screen lg:w-full md:w-full h-auto rounded-xl overflow-hidden">
+                        <section className="flex-1">
+                            <div className="flex items-start justify-center">
+                                <div className="flex flex-col">
+                                    <div className="flex justify-between flex-wrap mt-6">
+                                <div className="flex flex-col text-start ml-5">
                                     <h1
                                         className="text-xl lg:text-xl text-black"
                                         style={{ fontFamily: "'Happy Monkey', cursive" }}
@@ -72,12 +68,18 @@ export default async function HomePage() {
                                     >
                                         Lorem ipsum dolor sit amet, consectetur adipiscing
                                     </p>
+                                </div>
+                                <div className="pl-3">
+                                    <FilterBook />
+                                </div>
+                            </div>
                                     <div className="flex flex-wrap justify-center gap-3 mt-5">
-                                        <PopularBookCard />
+                                        <BookCard />
                                     </div>
                                 </div>
-
                             </div>
+
+
                             <div className="flex justify-between flex-wrap mt-6">
                                 <div className="flex flex-col text-start ml-5 mt-4">
                                     <h1
@@ -98,39 +100,49 @@ export default async function HomePage() {
                                     <FilterActivity />
                                 </div>
                             </div>
-                            <div className="flex flex-wrap justify-center gap-5">
+                            <div className="flex flex-wrap justify-center">
                                 <LiterasiAct />
                                 <LiterasiAct />
                                 <LiterasiAct />
                             </div>
 
-                            <div className="flex flex-col text-start ml-5">
-                                <h1
-                                    className="text-xl lg:text-xl text-black"
-                                    style={{ fontFamily: "'Happy Monkey', cursive" }}
-                                >
-                                    <span className="text-[#6DC700]">Aktivitas Literasi</span>
-                                </h1>
-                                <p
-                                    className="text-[14px] text-black"
-                                    style={{ fontFamily: "'Hanken Grotesk', sans-serif" }}
-                                >
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing
-                                </p>
-                            </div>
-                            <div className="flex flex-wrap">
-                                <LiterasiAct />
-                                <LiterasiAct />
-                                <LiterasiAct />
-                            </div>
+                            <div className="flex justify-between flex-wrap mt-6">
+                                <div className="flex flex-col text-start ml-5 mt-4">
+                                    <h1
+                                        className="text-xl lg:text-xl text-black"
+                                        style={{ fontFamily: "'Happy Monkey', cursive" }}
+                                    >
+                                        <span className="text-[#6DC700]">Aktivitas Literasi</span>
+                                    </h1>
 
-                            <div className="mb-10">
-                                <HomeFooter />
+                                    <p
+                                        className="text-[14px] text-black"
+                                        style={{ fontFamily: "'Hanken Grotesk', sans-serif" }}
+                                    >
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing
+                                    </p>
+                                </div>
+                                <div>
+                                    <FilterActivity />
+                                </div>
                             </div>
+                            <div className="flex flex-wrap justify-center">
+                                <LiterasiAct />
+                                <LiterasiAct />
+                                <LiterasiAct />
+                            </div>
+                            <HomeFooter />
                         </section>
                     </div>
                 </div>
+            </Sidebar>
+
+            {/* Right Sidebar - Fixed Position */}
+            <div className="hidden xl:block w-70 shrink-0">
+                <div className="fixed top-0 right-0 ">
+                    <RightBar />
+                </div>
             </div>
-        </Sidebar>
+        </div>
     );
 }

@@ -9,7 +9,7 @@ export default async function BookCard(){
     .then(data => data.data);
     
     return(
-        <>
+        <div className="flex flex-wrap justify-start gap-3 pl-5">
                 {books?.map(item => (
                     <a 
                         href={`/detail?id=${item.id}`} 
@@ -20,7 +20,7 @@ export default async function BookCard(){
                             <img 
                                 src={item.gambar} 
                                 alt={item.judul_buku} 
-                                className="h-[200px] w-auto object-cover"
+                                className="h-[250px] w-auto object-cover"
                             />
                             <div className="absolute inset-0 from-black/95 via-black/60 to-transparent"></div>
                             
@@ -47,6 +47,6 @@ export default async function BookCard(){
                         </div>
                     </a>
                 ))}
-        </>
+        </div>
     )
 }

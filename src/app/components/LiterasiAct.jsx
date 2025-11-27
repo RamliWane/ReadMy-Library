@@ -3,7 +3,7 @@ import { Mic, Clock, MapPin } from 'lucide-react';
 
 export default function LiterasiAct() {
     return (
-        <div className="max-w-[300px] justify-center items-center m-2 mt-5 mb-10 bg-white rounded-lg shadow-lg overflow-hidden">
+        <div className="max-w-[280px] justify-center items-center m-2 mt-5 mb-10 bg-white rounded-lg shadow-lg overflow-hidden">
             <div className="relative h-40 bg-gradient-to-br from-gray-700 to-gray-900">
                 <img
                     src="./aktivitas-literasi.jpeg"
@@ -11,7 +11,7 @@ export default function LiterasiAct() {
                     className="w-full h-full object-cover"
                 />
             </div>
-            <div className="p-3">
+            <div className="p-2">
                 <h2 className="text-[16px] font-bold text-gray-900 mb-3 leading-tight">
                     Sosialisasi Dan Workshop Taman Bacaan
                 </h2>
