@@ -6,7 +6,7 @@ import { Search, Book, Users, BookOpen, Menu, Bell, User, Home, Settings, LogOut
 
 export default function Sidebar({ children, users }) { // Terima users sebagai props
   const [isOpen, setIsOpen] = useState(false);
-  
+
   // Ambil user pertama atau sesuaikan logika Anda
   const currentUser = users?.[0] || { username: "Guest", role: "User" };
 
@@ -24,27 +24,26 @@ export default function Sidebar({ children, users }) { // Terima users sebagai p
         <div>
           <div className="p-6">
             <div className="flex items-center gap-2">
-              <Book className="w-8 h-8 text-blue-600" />
-              <h1 className="text-xl font-bold text-slate-800">Perpustakaan</h1>
+              <h1 className="text-xl font-bold text-slate-800" style={{ fontFamily: "'Homemade Apple', cursive" }} >ReadMy</h1>
             </div>
           </div>
 
           <nav className="px-4 space-y-2">
-            <a href="./home" className="flex items-center gap-3 px-4 py-3 bg-blue-50 text-blue-600 rounded-lg">
+            <a href="./home" className="flex items-center gap-3 px-4 py-2 bg-[#6DC700] text-white rounded-lg">
               <Home className="w-5 h-5" />
-              <span className="font-medium">Home</span>
+              <span className="font-medium" style={{ fontFamily: "'Happy Monkey', cursive" }}>Home</span>
             </a>
             <a href="./katalog" className="flex items-center gap-3 px-4 py-3 text-slate-600 hover:bg-slate-50 rounded-lg">
               <Book className="w-5 h-5" />
-              <span>Katalog Buku</span>
+              <span style={{ fontFamily: "'Happy Monkey', cursive" }}>Katalog Buku</span>
             </a>
             <a href="./profile" className="flex items-center gap-3 px-4 py-3 text-slate-600 hover:bg-slate-50 rounded-lg">
               <Users className="w-5 h-5" />
-              <span>Profile</span>
+              <span style={{ fontFamily: "'Happy Monkey', cursive" }}>Profile</span>
             </a>
             <a className="flex items-center gap-3 px-4 py-3 text-slate-600 hover:bg-slate-50 rounded-lg">
               <Settings className="w-5 h-5" />
-              <span>Pengaturan</span>
+              <span style={{ fontFamily: "'Happy Monkey', cursive" }}>Pengaturan</span>
             </a>
           </nav>
         </div>
@@ -68,7 +67,7 @@ export default function Sidebar({ children, users }) { // Terima users sebagai p
       {/* Main Content */}
       <main className="flex-1 flex flex-col overflow-hidden lg:pl-60 pt-10">
         {/* Topbar */}
-        <header className="fixed z-10 top-0 left-0 w-full bg-white shadow-sm">
+        <header className="fixed z-10 top-0 left-0 w-full bg-white">
           <div className="flex items-center justify-between px-8 py-4">
             <div className="flex items-center gap-4">
               <button

@@ -25,35 +25,34 @@ export default function Sidebar({ children, users }) { // Terima users sebagai p
                 <div>
                     <div className="p-6">
                         <div className="flex items-center gap-2">
-                            <Book className="w-8 h-8 text-blue-600" />
-                            <h1 className="text-xl font-bold text-slate-800">Perpustakaan</h1>
+                            <h1 className="text-2xl font-bold text-slate-800" style={{ fontFamily: "'Homemade Apple', cursive" }}>ReadMy</h1>
                         </div>
                     </div>
 
                     <nav className="px-4 space-y-2 flex-1">
                         <a href='./home' className="flex items-center gap-3 px-4 py-3 text-slate-600 hover:bg-slate-50 rounded-lg">
                             <Home className="w-5 h-5" />
-                            <span className="font-medium">Beranda</span>
+                            <span className="font-medium" style={{ fontFamily: "'Happy Monkey', cursive" }}>Beranda</span>
                         </a>
                         <a href="./dashboard" className="flex items-center gap-3 px-4 py-2 bg-[#6DC700] text-white rounded-lg">
                             <Book className="w-5 h-5" />
-                            <span className="font-medium">Dashboard</span>
+                            <span className="font-medium" style={{ fontFamily: "'Happy Monkey', cursive" }}>Dashboard</span>
                         </a>
                         <a href="./borrowpending" className="flex items-center gap-3 px-4 py-3 text-slate-600 hover:bg-slate-50 rounded-lg">
                             <Users className="w-5 h-5" />
-                            <span>Pending</span>
+                            <span style={{ fontFamily: "'Happy Monkey', cursive" }}>Pending</span>
                         </a>
                         <a href="./borrowlist" className="flex items-center gap-3 px-4 py-3 text-slate-600 hover:bg-slate-50 rounded-lg">
                             <BookOpen className="w-5 h-5" />
-                            <span>Peminjaman</span>
+                            <span style={{ fontFamily: "'Happy Monkey', cursive" }}>Peminjaman</span>
                         </a>
                         <a href="./booklist" className="flex items-center gap-3 px-4 py-3 text-slate-600 hover:bg-slate-50 rounded-lg">
                             <BookOpen className="w-5 h-5" />
-                            <span>Book List</span>
+                            <span style={{ fontFamily: "'Happy Monkey', cursive" }}>Book List</span>
                         </a>
                         <a className="flex items-center gap-3 px-4 py-3 text-slate-600 hover:bg-slate-50 rounded-lg">
                             <Settings className="w-5 h-5" />
-                            <span>Pengaturan</span>
+                            <span style={{ fontFamily: "'Happy Monkey', cursive" }}>Pengaturan</span>
                         </a>
                     </nav>
                 </div>

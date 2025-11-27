@@ -20,7 +20,7 @@ export default async function DashboardPerpustakaan() {
         <div className="flex flex-col lg:flex-row p-4 sm:p-6 gap-4 lg:gap-0">
           <div className='flex flex-col gap-2 w-full lg:w-auto'>
             <div className='bg-white p-2 sm:p-1 w-full lg:max-w-sm flex items-center justify-center rounded-lg shadow'>
-              <h1 className='text-[#6DC700] text-xl sm:text-2xl text-center' style={{ fontFamily: "'Happy Monkey', cursive" }}>Dashboard Perpustakaan</h1>
+              <h1 className='text-black text-xl sm:text-2xl text-center' style={{ fontFamily: "'Happy Monkey', cursive" }}>Dashboard Perpustakaan</h1>
             </div>
             <InputBook />
           </div>
@@ -29,8 +29,8 @@ export default async function DashboardPerpustakaan() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-6 sm:mb-8">
             <div className="bg-white p-4 sm:p-6 rounded-xl shadow-sm">
               <div className="flex items-center justify-between mb-4">
-                <div className="p-3 bg-blue-100 rounded-lg">
-                  <Book className="w-6 h-6 text-blue-600" />
+                <div className="p-3 bg-black rounded-lg">
+                  <Book className="w-6 h-6 text-white" />
                 </div>
                 <span className="text-xs text-green-600 font-medium">+12%</span>
               </div>
@@ -40,8 +40,8 @@ export default async function DashboardPerpustakaan() {
 
             <div className="bg-white p-4 sm:p-6 rounded-xl shadow-sm">
               <div className="flex items-center justify-between mb-4">
-                <div className="p-3 bg-green-100 rounded-lg">
-                  <Users className="w-6 h-6 text-green-600" />
+                <div className="p-3 bg-black rounded-lg">
+                  <Users className="w-6 h-6 text-white" />
                 </div>
                 <span className="text-xs text-green-600 font-medium">+8%</span>
               </div>
@@ -51,8 +51,8 @@ export default async function DashboardPerpustakaan() {
 
             <div className="bg-white p-4 sm:p-6 rounded-xl shadow-sm">
               <div className="flex items-center justify-between mb-4">
-                <div className="p-3 bg-orange-100 rounded-lg">
-                  <BookOpen className="w-6 h-6 text-orange-600" />
+                <div className="p-3 bg-black rounded-lg">
+                  <BookOpen className="w-6 h-6 text-white" />
                 </div>
                 <span className="text-xs text-red-600 font-medium">-3%</span>
               </div>
@@ -62,8 +62,8 @@ export default async function DashboardPerpustakaan() {
 
             <div className="bg-white p-4 sm:p-6 rounded-xl shadow-sm">
               <div className="flex items-center justify-between mb-4">
-                <div className="p-3 bg-purple-100 rounded-lg">
-                  <TrendingUp className="w-6 h-6 text-purple-600" />
+                <div className="p-3 bg-black rounded-lg">
+                  <TrendingUp className="w-6 h-6 text-white" />
                 </div>
                 <span className="text-xs text-green-600 font-medium">+15%</span>
               </div>
