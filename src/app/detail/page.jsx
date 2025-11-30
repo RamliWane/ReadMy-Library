@@ -1,8 +1,6 @@
 "use client";
 
 import Sidebar from "../components/Sidebar";
-import RightBar from "../components/RightBar";
-import BookCard from "../components/BookCard";
 import BorrowButton from "../components/BorrowButton";
 
 import { useEffect, useState } from "react";
