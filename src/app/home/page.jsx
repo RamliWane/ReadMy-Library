@@ -21,16 +21,16 @@ export default async function HomePage() {
         <div className="flex w-full min-h-screen bg-gray-50">
             <Sidebar users={users}>
                 <div className="flex-1 flex-wrap items-center lg:p-4">
-                    <div className="flex bg-white mt-2 w-full h-auto rounded-xl overflow-hidden">
+                    <div className="flex bg-white mt-2 p-3 w-full h-auto rounded-xl overflow-hidden">
                         <section className="w-full">
                             <div className="flex items-start justify-center">
                                 <div className="w-full">
-                                    <div className="lg:pl-12 md:pl-12 pl-5">
+                                    <div className="lg:pl-5 md:pl-12 pl-5">
                                         <h1
                                             className="text-xl lg:text-xl text-black"
                                             style={{ fontFamily: "'Happy Monkey', cursive" }}
                                         >
-                                            <span className="text-[#6DC700]">Recomended For You</span>
+                                            <span className="text-[#6DC700]">New Release Book</span>
                                         </h1>
 
                                         <p
@@ -45,9 +45,6 @@ export default async function HomePage() {
                             </div>
                         </section>
                     </div>
-
-
-
 
                     <div className=" flex bg-white mt-2 w-screen lg:w-full md:w-full h-auto rounded-xl overflow-hidden">
                         <section className="flex-1">
@@ -96,7 +93,7 @@ export default async function HomePage() {
                                         Lorem ipsum dolor sit amet, consectetur adipiscing
                                     </p>
                                 </div>
-                                <div>
+                                <div className="pl-3">
                                     <FilterActivity />
                                 </div>
                             </div>
@@ -106,31 +103,6 @@ export default async function HomePage() {
                                 <LiterasiAct />
                             </div>
 
-                            <div className="flex justify-between flex-wrap mt-6">
-                                <div className="flex flex-col text-start ml-5 mt-4">
-                                    <h1
-                                        className="text-xl lg:text-xl text-black"
-                                        style={{ fontFamily: "'Happy Monkey', cursive" }}
-                                    >
-                                        <span className="text-[#6DC700]">Aktivitas Literasi</span>
-                                    </h1>
-
-                                    <p
-                                        className="text-[14px] text-black"
-                                        style={{ fontFamily: "'Hanken Grotesk', sans-serif" }}
-                                    >
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing
-                                    </p>
-                                </div>
-                                <div>
-                                    <FilterActivity />
-                                </div>
-                            </div>
-                            <div className="flex flex-wrap justify-center">
-                                <LiterasiAct />
-                                <LiterasiAct />
-                                <LiterasiAct />
-                            </div>
                             <HomeFooter />
                         </section>
                     </div>

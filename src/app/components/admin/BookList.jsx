@@ -1,4 +1,4 @@
-//app/components/BorrowList.jsx
+//app/components/BookList.jsx
 
 import DeleteButton from "./DeleteButton";
 import EditButton from "./EditButton";
@@ -24,18 +24,16 @@ export default async function BookList() {
           <p className="text-sm text-gray-500">Semua buku</p>
         </div>
       </div>
-      <>
-        {book?.map((item) => (
-          <div key={item.id} className="space-y-3 max-h-96 overflow-y-auto pr-2">
-            <div
+      <div className="space-y-3 max-h-96 overflow-y-auto pr-2">
+        <>
+          {book?.map((item) => (
+            <div key={item.id}
               className="group p-4 bg-gradient-to-r from-white to-gray-50 rounded-2xl border-2 border-gray-100 hover:border-emerald-300 hover:shadow-md transition-all duration-200"
             >
               <div className="space-y-3 max-h-96 overflow-y-auto pr-2">
 
-                {/* FLEX UTAMA */}
                 <div className="flex justify-between items-center">
 
-                  {/* BAGIAN KIRI */}
                   <div className="flex items-center gap-3">
                     <img className="w-15 h-23" src={item.gambar} alt={item.judul_buku} />
 
@@ -63,18 +61,17 @@ export default async function BookList() {
                     </div>
                   </div>
 
-                  {/* BAGIAN KANAN (BUTTON) */}
                   <div className="flex gap-2">
-                    <EditButton />
+                    <EditButton id={item.id} />
                     <DeleteButton />
                   </div>
 
                 </div>
               </div>
             </div>
-          </div>
-              ))}
-    </>
+          ))}
+        </>
       </div>
-      )
+    </div>
+  )
 }

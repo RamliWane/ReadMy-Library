@@ -22,7 +22,6 @@ export default function Katalog() {
                                     >
                                         <span className="text-[#6DC700]">Katalog Buku</span>
                                     </h1>
-
                                     <p
                                         className="text-[14px] text-black"
                                         style={{ fontFamily: "'Hanken Grotesk', sans-serif" }}
@@ -40,7 +39,7 @@ export default function Katalog() {
                             </div>
                             <hr className="border-t border-black my-4 mx-5" />
 
-                            <div className="flex flex-wrap items-center justify-center gap-2 mt-5">
+                            <div className="mt-5">
                                 <BookCard />
                             </div>                            
                             <div className="mb-10">

@@ -9,7 +9,7 @@ export default async function BookCard(){
     .then(data => data.data);
     
     return(
-        <div className="flex flex-wrap justify-start gap-3 pl-5">
+        <div className="flex flex-wrap justify-center gap-5">
                 {books?.map(item => (
                     <a 
                         href={`/detail?id=${item.id}`} 
