@@ -19,7 +19,7 @@ export default async function BookListPage() {
     return (
         <SidebarAdmin>
             <div className="flex flex-col md:p-5 flex-1 w-full overflow-x-hidden">
-                <div className="flex flex-col text-start items-center justify-center md:ml-5 p-3 rounded-xl bg-white max-w-sm mb-4">
+                <div className="flex flex-col text-start items-center justify-center md:ml-5 p-1 rounded-xl bg-white w-40 mb-4">
                     <h1 className="text-lg md:text-xl lg:text-2xl text-black">
                         <span className="text-[#6DC700]" style={{ fontFamily: "'Happy Monkey', cursive" }}>Semua Buku</span>
                     </h1>
