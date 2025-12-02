@@ -54,7 +54,7 @@ export default function Detail() {
                                 </p>
 
                                 <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 pt-4">
-                                    <BorrowButton />
+                                    <BorrowButton idBuku={book.id}/>
                                     <div className="flex gap-3">
                                         <button className="p-3 bg-white border border-gray-200 rounded-lg hover:bg-gray-50 hover:shadow-md transition-all duration-300 hover:-translate-y-1 group">
                                             <svg className="w-6 h-6 text-gray-600 group-hover:text-[#6DC700] transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
