@@ -1,14 +1,26 @@
-// component/Sidebar.jsx
 "use client";
 
 import { useState } from "react";
-import { Search, Book, Users, BookOpen, Menu, Bell, User, Home, Settings, LogOut } from 'lucide-react';
+import { usePathname } from "next/navigation"; // Import usePathname
+import { Book, Users, Menu, Bell, User, Home, Settings, LogOut } from 'lucide-react';
 
-export default function Sidebar({ children, users }) { // Terima users sebagai props
+export default function Sidebar({ children, users }) {
   const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname(); // Dapatkan path saat ini
 
   // Ambil user pertama atau sesuaikan logika Anda
   const currentUser = users?.[0] || { username: "Guest", role: "User" };
+
+  // Fungsi helper untuk menentukan apakah link aktif
+  const isActive = (path) => pathname === path;
+
+  // Menu items array
+  const menuItems = [
+    { href: '/home', icon: Home, label: 'Home' },
+    { href: '/katalog', icon: Book, label: 'Katalog Buku' },
+    { href: '/profile', icon: Users, label: 'Profile' },
+    { href: '/settings', icon: Settings, label: 'Pengaturan' },
+  ];
 
   return (
     <div className="flex min-h-screen bg-[#ECF4E8] overflow-hidden">
@@ -24,32 +36,42 @@ export default function Sidebar({ children, users }) { // Terima users sebagai p
         <div>
           <div className="p-6">
             <div className="flex items-center gap-2">
-              <h1 className="text-xl font-bold text-slate-800" style={{ fontFamily: "'Homemade Apple', cursive" }} >ReadMy</h1>
+              <h1 className="text-xl font-bold text-slate-800" style={{ fontFamily: "'Homemade Apple', cursive" }}>
+                ReadMy
+              </h1>
             </div>
           </div>
 
           <nav className="px-4 space-y-2">
-            <a href="./home" className="flex items-center gap-3 px-4 py-2 bg-[#6DC700] text-white rounded-lg">
-              <Home className="w-5 h-5" />
-              <span className="font-medium" style={{ fontFamily: "'Happy Monkey', cursive" }}>Home</span>
-            </a>
-            <a href="./katalog" className="flex items-center gap-3 px-4 py-3 text-slate-600 hover:bg-slate-50 rounded-lg">
-              <Book className="w-5 h-5" />
-              <span style={{ fontFamily: "'Happy Monkey', cursive" }}>Katalog Buku</span>
-            </a>
-            <a href="./profile" className="flex items-center gap-3 px-4 py-3 text-slate-600 hover:bg-slate-50 rounded-lg">
-              <Users className="w-5 h-5" />
-              <span style={{ fontFamily: "'Happy Monkey', cursive" }}>Profile</span>
-            </a>
-            <a className="flex items-center gap-3 px-4 py-3 text-slate-600 hover:bg-slate-50 rounded-lg">
-              <Settings className="w-5 h-5" />
-              <span style={{ fontFamily: "'Happy Monkey', cursive" }}>Pengaturan</span>
-            </a>
+            {menuItems.map((item) => {
+              const Icon = item.icon;
+              const active = isActive(item.href);
+              
+              return (
+                <a
+                  key={item.href}
+                  href={item.href}
+                  className={`
+                    flex items-center gap-3 px-4 rounded-lg
+                    transition-colors duration-200
+                    ${active 
+                      ? 'py-2 bg-[#6DC700] text-white' 
+                      : 'py-3 text-slate-600 hover:bg-slate-50'
+                    }
+                  `}
+                >
+                  <Icon className="w-5 h-5" />
+                  <span className={active ? "font-medium" : ""} style={{ fontFamily: "'Happy Monkey', cursive" }}>
+                    {item.label}
+                  </span>
+                </a>
+              );
+            })}
           </nav>
         </div>
 
         <div className="p-4 border-t">
-          <button className="flex items-center gap-3 px-4 py-3 text-slate-600 hover:bg-slate-50 rounded-lg w-full">
+          <button className="flex items-center gap-3 px-4 py-3 text-slate-600 hover:bg-slate-50 rounded-lg w-full transition-colors">
             <LogOut className="w-5 h-5" />
             <span>Keluar</span>
           </button>

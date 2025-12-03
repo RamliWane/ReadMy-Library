@@ -17,12 +17,30 @@ export default async function DashboardPerpustakaan() {
   
   return (
     <SidebarAdmin>
+           <style dangerouslySetInnerHTML={{__html: `
+                @keyframes slideUp {
+                    from {
+                        opacity: 0;
+                        transform: translateY(30px);
+                    }
+                    to {
+                        opacity: 1;
+                        transform: translateY(0);
+                    }
+                }
+                
+                .animate-slide-up {
+                    animation: slideUp 0.6s ease-out forwards;
+                    opacity: 0;
+                }
+            `}} />
+
         <div className="flex flex-col lg:flex-row p-4 sm:p-6 gap-4 lg:gap-0">
           <div className='flex flex-col gap-2 w-full lg:w-auto'>
             <div className='bg-white p-2 sm:p-1 w-full lg:max-w-sm flex items-center justify-center rounded-lg shadow'>
               <h1 className='text-black text-xl sm:text-2xl text-center' style={{ fontFamily: "'Happy Monkey', cursive" }}>Dashboard Perpustakaan</h1>
             </div>
-            <InputBook />
+            <InputBook delay={200} />
           </div>
         <div className="w-full lg:p-8 p-0 mt-4 lg:mt-0">
           {/* Stats Cards */}
