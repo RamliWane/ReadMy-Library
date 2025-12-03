@@ -6,7 +6,6 @@ import LiterasiAct from "../components/LiterasiAct";
 import RightBar from "../components/RightBar";
 import Sidebar from "../components/Sidebar";
 import NewReleaseBook from "../components/NewReleaseBook";
-import "../components/styles/animation.css";
 
 export default async function HomePage() {
     const users = await fetch("http://localhost:5000/users", {
@@ -17,10 +16,10 @@ export default async function HomePage() {
         .then(data => data.data);
 
     return (
-        <div className="flex w-full min-h-screen bg-gray-50">
+        <div className="flex w-full min-h-screen bg-gray-50 ">
             <Sidebar users={users}>
-                <div className="flex-1 flex-wrap items-center lg:p-4">
-                    <div className="flex bg-white mt-2 p-3 w-full h-auto rounded-xl overflow-hidden animate-slide-up">
+                <div className="flex-1 flex-wrap items-center lg:p-4 ">
+                    <div className="flex bg-white mt-2 p-3 w-full h-auto rounded-xl overflow-hidden animate-slide-up animate-delay-200">
                         <section className="w-full">
                             <div className="flex items-start justify-center">
                                 <div className="w-full">

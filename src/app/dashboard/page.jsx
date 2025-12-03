@@ -17,30 +17,12 @@ export default async function DashboardPerpustakaan() {
   
   return (
     <SidebarAdmin>
-           <style dangerouslySetInnerHTML={{__html: `
-                @keyframes slideUp {
-                    from {
-                        opacity: 0;
-                        transform: translateY(30px);
-                    }
-                    to {
-                        opacity: 1;
-                        transform: translateY(0);
-                    }
-                }
-                
-                .animate-slide-up {
-                    animation: slideUp 0.6s ease-out forwards;
-                    opacity: 0;
-                }
-            `}} />
-
-        <div className="flex flex-col lg:flex-row p-4 sm:p-6 gap-4 lg:gap-0">
+        <div className="flex flex-col lg:flex-row p-4 sm:p-6 gap-4 lg:gap-0 animate-slide-up animate-delay-200">
           <div className='flex flex-col gap-2 w-full lg:w-auto'>
             <div className='bg-white p-2 sm:p-1 w-full lg:max-w-sm flex items-center justify-center rounded-lg shadow'>
               <h1 className='text-black text-xl sm:text-2xl text-center' style={{ fontFamily: "'Happy Monkey', cursive" }}>Dashboard Perpustakaan</h1>
             </div>
-            <InputBook delay={200} />
+            <InputBook />
           </div>
         <div className="w-full lg:p-8 p-0 mt-4 lg:mt-0">
           {/* Stats Cards */}
@@ -101,7 +83,7 @@ export default async function DashboardPerpustakaan() {
                 <div className="space-y-4">
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center shrink-0">
                         <Book className="w-5 h-5 text-blue-600" />
                       </div>
                       <div className="min-w-0">
@@ -113,7 +95,7 @@ export default async function DashboardPerpustakaan() {
                   </div>
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <div className="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center shrink-0">
                         <Book className="w-5 h-5 text-green-600" />
                       </div>
                       <div className="min-w-0">
@@ -125,7 +107,7 @@ export default async function DashboardPerpustakaan() {
                   </div>
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 bg-orange-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <div className="w-10 h-10 bg-orange-100 rounded-lg flex items-center justify-center shrink-0">
                         <Book className="w-5 h-5 text-orange-600" />
                       </div>
                       <div className="min-w-0">
@@ -148,7 +130,7 @@ export default async function DashboardPerpustakaan() {
                 <div className="space-y-4">
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-3 min-w-0 flex-1">
-                      <div className="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <div className="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center shrink-0">
                         <Book className="w-5 h-5 text-purple-600" />
                       </div>
                       <div className="min-w-0 flex-1">
@@ -156,14 +138,14 @@ export default async function DashboardPerpustakaan() {
                         <p className="text-xs text-slate-500">45 peminjaman</p>
                       </div>
                     </div>
-                    <div className="flex items-center gap-1 flex-shrink-0 ml-2">
+                    <div className="flex items-center gap-1 shrink-0 ml-2">
                       <TrendingUp className="w-4 h-4 text-green-600" />
                       <span className="text-xs text-green-600 font-medium">+12</span>
                     </div>
                   </div>
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-3 min-w-0 flex-1">
-                      <div className="w-10 h-10 bg-pink-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <div className="w-10 h-10 bg-pink-100 rounded-lg flex items-center justify-center shrink-0">
                         <Book className="w-5 h-5 text-pink-600" />
                       </div>
                       <div className="min-w-0 flex-1">
@@ -171,14 +153,14 @@ export default async function DashboardPerpustakaan() {
                         <p className="text-xs text-slate-500">38 peminjaman</p>
                       </div>
                     </div>
-                    <div className="flex items-center gap-1 flex-shrink-0 ml-2">
+                    <div className="flex items-center gap-1 shrink-0 ml-2">
                       <TrendingUp className="w-4 h-4 text-green-600" />
                       <span className="text-xs text-green-600 font-medium">+8</span>
                     </div>
                   </div>
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-3 min-w-0 flex-1">
-                      <div className="w-10 h-10 bg-yellow-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <div className="w-10 h-10 bg-yellow-100 rounded-lg flex items-center justify-center shrink-0">
                         <Book className="w-5 h-5 text-yellow-600" />
                       </div>
                       <div className="min-w-0 flex-1">
@@ -186,7 +168,7 @@ export default async function DashboardPerpustakaan() {
                         <p className="text-xs text-slate-500">32 peminjaman</p>
                       </div>
                     </div>
-                    <div className="flex items-center gap-1 flex-shrink-0 ml-2">
+                    <div className="flex items-center gap-1 shrink-0 ml-2">
                       <TrendingUp className="w-4 h-4 text-green-600" />
                       <span className="text-xs text-green-600 font-medium">+5</span>
                     </div>

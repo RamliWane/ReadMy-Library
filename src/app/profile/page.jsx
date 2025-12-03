@@ -38,7 +38,7 @@ export default async function Profile() {
     return (
         <Sidebar>
             <div className="min-h-screen bg-gradient-to-br from-[#ECF4E8] to-[#D4E7C5] p-4 md:p-8">
-                <div className="max-w-5xl mx-auto">
+                <div className="max-w-5xl mx-auto animate-slide-up animate-delay-200">
                     {/* Header Card */}
                     <div className="bg-white rounded-2xl shadow-lg overflow-hidden mb-6">
                         <div className="h-32 bg-gradient-to-r from-green-400 to-emerald-500"></div>

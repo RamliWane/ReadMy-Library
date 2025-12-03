@@ -10,8 +10,8 @@ import FilterActivity from "../components/FilterActivity";
 export default function Katalog() {
     return (
         <Sidebar>
-            <div className="p-4">
-                <div className="flex-1 flex-wrap items-center">
+            <div className="p-4 ">
+                <div className="flex-1 flex-wrap items-center animate-slide-up animate-delay-200">
                     <div className=" flex bg-white mt-2 w-full h-auto">
                         <section className="flex-1">
                             <div className="flex justify-start flex-col flex-wrap">
