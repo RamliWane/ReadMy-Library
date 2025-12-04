@@ -18,47 +18,24 @@ export default async function AuthorSidebar() {
         </div>
 
         <div className="space-y-2">
-          {author?.map((item, index) => (
+          {author?.map((item) => (
             <div
               key={item.id}
               className="flex items-start gap-3 p-3 rounded-xl hover:bg-gray-50 transition-all cursor-pointer group border border-transparent hover:border-gray-200"
             >
               <div className="relative">
                 <div className="w-14 h-14 rounded-full bg-gray-200 ring-2 ring-gray-100 group-hover:ring-green-200 transition-all"></div>
-
-                {index === 0 && (
-                  <div className="absolute -bottom-1 -right-1 w-6 h-6 bg-white rounded-full flex items-center justify-center shadow-sm">
-                    <TrendingUp className="w-3 h-3 text-orange-600" />
-                  </div>
-                )}
-                {index === 1 && (
-                  <div className="absolute -bottom-1 -right-1 w-6 h-6 bg-white rounded-full flex items-center justify-center shadow-sm">
-                    <Crown className="w-3 h-3 text-yellow-600" />
-                  </div>
-                )}
-                {index === 4 && (
-                  <div className="absolute -bottom-1 -right-1 w-6 h-6 bg-white rounded-full flex items-center justify-center shadow-sm">
-                    <Star className="w-3 h-3 text-green-600" />
-                  </div>
-                )}
               </div>
 
               <div className="flex-1 min-w-0">
                 <div className="flex items-center justify-between gap-2 mb-1">
-                  {/* NAME */}
                   <div className="text-sm font-semibold text-gray-800 group-hover:text-green-600 transition-colors line-clamp-1">
                     {item.name}
                   </div>
                 </div>
 
-                {/* COUNTRY */}
                 <div className="text-xs text-gray-500 mb-1.5">
                   {item.country}
-                </div>
-
-                <div className="flex items-center gap-3">
-                  <div className="h-3 bg-gray-100 rounded w-16"></div>
-                  <div className="h-3 bg-gray-100 rounded w-14"></div>
                 </div>
               </div>
 
@@ -70,7 +47,6 @@ export default async function AuthorSidebar() {
         </div>
       </div>
 
-      {/* Bagian bawah tetap sama */}
       <div className="px-6 pb-6">
         <div className="from-gray-900 to-gray-800 rounded-xl p-5 relative overflow-hidden shadow-lg">
           <div className="absolute top-0 right-0 w-24 h-24 bg-green-500 rounded-full -mr-12 -mt-12 opacity-20"></div>
