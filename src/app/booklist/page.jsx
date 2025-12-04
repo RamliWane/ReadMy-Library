@@ -12,9 +12,9 @@ export default async function BookListPage() {
 
     const user = session?.user;
 
-    if (session.user.role !== "admin") {
-        redirect("/forbidden");
-    }
+if (!session || !["admin", "petugas"].includes(session.user.role)) {
+  redirect("/forbidden");
+}
 
     return (
         <SidebarAdmin>

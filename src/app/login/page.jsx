@@ -28,7 +28,7 @@ const Form = () => {
         const data = await respon.json();
         const role = data?.user?.role;
 
-        if (role !== 'admin') {
+        if (role !== 'admin', 'petugas') {
         redirect('/home');
         }else {
         redirect('/dashboard');

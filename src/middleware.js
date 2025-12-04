@@ -9,7 +9,7 @@ export default withAuth(
         if (!token) return false;
 
         // hanya admin boleh ke /dashboard
-        return token.role === "admin";
+        return token.role === "admin", "petugas";
       },
     },
     pages: {

@@ -11,9 +11,9 @@ export default async function DashboardPerpustakaan() {
   
   const session = await getServerSession(authOptions);
   
-  if (!session || session.user.role !== "admin") {
-      redirect("/forbidden");
-  }
+if (!session || !["admin", "petugas"].includes(session.user.role)) {
+  redirect("/forbidden");
+}
   
   return (
     <SidebarAdmin>

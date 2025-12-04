@@ -8,9 +8,10 @@ import { authOptions } from "../api/auth/[...nextauth]/route";
 export default async function editbook({ searchParams }) {
   const session = await getServerSession(authOptions);
 
-  if (!session || session.user.role !== "admin") {
-    redirect("/forbidden");
-  }
+if (!session || !["admin", "petugas"].includes(session.user.role)) {
+  redirect("/forbidden");
+}
+
 
 const { id } = await searchParams;
 
