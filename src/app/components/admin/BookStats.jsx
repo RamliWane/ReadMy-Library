@@ -1,9 +1,7 @@
 export default function DashboardStats() {
   return (
       <div className="max-w-2xl mx-auto space-y-4">
-        {/* Row 1 */}
         <div className="grid grid-cols-2 gap-4">
-          {/* Possession Card */}
           <div className="bg-white/70 backdrop-blur-sm rounded-3xl p-6 shadow-lg">
             <div className="flex items-center gap-3 mb-2">
               <div className="w-10 h-10 bg-purple-400 rounded-full flex items-center justify-center">
@@ -16,7 +14,6 @@ export default function DashboardStats() {
             <div className="text-4xl font-bold text-gray-800">65%</div>
           </div>
 
-          {/* Overall Price Card */}
           <div className="bg-white/70 backdrop-blur-sm rounded-3xl p-6 shadow-lg">
             <div className="flex items-center gap-3 mb-2">
               <div className="w-10 h-10 bg-pink-400 rounded-full flex items-center justify-center">
@@ -31,9 +28,7 @@ export default function DashboardStats() {
           </div>
         </div>
 
-        {/* Row 2 */}
         <div className="grid grid-cols-2 gap-4">
-          {/* Transfer Budget Card */}
           <div className="bg-white/70 backdrop-blur-sm rounded-3xl p-6 shadow-lg">
             <div className="flex items-center gap-3 mb-2">
               <div className="w-10 h-10 bg-orange-400 rounded-full flex items-center justify-center">
@@ -47,7 +42,6 @@ export default function DashboardStats() {
             <div className="text-4xl font-bold text-gray-800">$240.6m</div>
           </div>
 
-          {/* Average Score Card */}
           <div className="bg-white/70 backdrop-blur-sm rounded-3xl p-6 shadow-lg">
             <div className="flex items-center gap-3 mb-2">
               <div className="w-10 h-10 bg-teal-500 rounded-full flex items-center justify-center">
@@ -61,8 +55,7 @@ export default function DashboardStats() {
           </div>
         </div>
 
-        {/* Training Reminder Card */}
-        <div className="bg-gradient-to-r from-teal-600 to-teal-500 rounded-3xl p-8 shadow-lg relative overflow-hidden">
+        <div className="bg-linear-to-r from-teal-600 to-teal-500 rounded-3xl p-8 shadow-lg relative overflow-hidden">
           <div className="relative z-10">
             <div className="text-teal-200 text-sm font-medium uppercase tracking-wide mb-2">
               Don't Forget

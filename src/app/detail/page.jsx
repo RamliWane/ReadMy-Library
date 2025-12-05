@@ -106,10 +106,10 @@ export default function Detail() {
                     </div>
                 </section>
 
-                <section className="bg-gradient-to-br from-[#E8E3D9] to-[#CCC5B8] py-12">
+                <section className="bg-linear-to-br from-[#E8E3D9] to-[#CCC5B8] py-12">
                     <div className="max-w-7xl mx-auto px-6">
                         <div className="flex flex-col lg:flex-row gap-8 items-start">
-                            <div className="w-full lg:w-96 flex-shrink-0">
+                            <div className="w-full lg:w-96 shrink-0">
                                 <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-lg">
                                     <h2 className="text-xl font-bold text-[#6DC700] mb-6" style={{ fontFamily: "'Hanken Grotesk', sans-serif" }}>
                                         Detail Buku

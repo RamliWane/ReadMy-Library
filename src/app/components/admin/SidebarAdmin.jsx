@@ -1,31 +1,28 @@
 "use client";
 
 import { useState } from "react";
-import { usePathname } from "next/navigation"; // Import usePathname
-import { Search, Book, Users, BookOpen, Menu, Bell, User, Home, Settings, LogOut } from 'lucide-react';
+import { usePathname } from "next/navigation";
+import { Search, Book, Users, BookOpen, Menu, Bell, User, Home, Settings, LogOut, HandHelping } from 'lucide-react';
 
 export default function Sidebar({ children, users }) {
     const [isOpen, setIsOpen] = useState(false);
-    const pathname = usePathname(); // Dapatkan path saat ini
+    const pathname = usePathname();
 
     const currentUser = users?.[0] || { username: "Guest", role: "User" };
 
-    // Fungsi helper untuk menentukan apakah link aktif
     const isActive = (path) => pathname === path;
 
-    // Menu items array untuk lebih mudah maintain
     const menuItems = [
         { href: '/home', icon: Home, label: 'Beranda' },
         { href: '/dashboard', icon: Book, label: 'Dashboard' },
         { href: '/borrowpending', icon: Users, label: 'Pending' },
-        { href: '/borrowlist', icon: BookOpen, label: 'Peminjaman' },
+        { href: '/borrowlist', icon: HandHelping, label: 'Peminjaman' },
         { href: '/booklist', icon: BookOpen, label: 'Book List' },
         { href: '/settings', icon: Settings, label: 'Pengaturan' },
     ];
 
     return (
         <div className="flex min-h-screen bg-[#ECF4E8] overflow-hidden">
-            {/* Sidebar */}
             <aside
                 className={`
                     fixed z-20 top-0 left-0 h-full w-64 bg-white shadow-lg flex flex-col justify-between
@@ -79,7 +76,6 @@ export default function Sidebar({ children, users }) {
                 </div>
             </aside>
 
-            {/* Overlay */}
             {isOpen && (
                 <div
                     className="fixed inset-0 bg-black/40 z-10 lg:hidden"
@@ -87,9 +83,7 @@ export default function Sidebar({ children, users }) {
                 />
             )}
 
-            {/* Main Content */}
             <main className="flex-1 flex flex-col overflow-hidden lg:pl-60 pt-10">
-                {/* Topbar */}
                 <header className="fixed z-10 top-0 left-0 w-full bg-white shadow-sm">
                     <div className="flex items-center justify-between px-8 py-4">
                         <div className="flex items-center gap-4">

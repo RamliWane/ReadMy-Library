@@ -6,12 +6,12 @@ export default function LiterasiAct() {
         <div className="w-full bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
             <div className="relative h-48 bg-linear-to-br from-gray-700 to-gray-900">
                 <img
-                    src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=400&h=300&fit=crop"
+                    src="./aktivitas-literasi.jpeg"
                     alt="Event venue"
                     className="w-full h-full object-cover"
                 />
             </div>
-            <div className="p-4">
+            <div className="p-1">
                 <h2 className="text-lg font-bold text-gray-900 mb-4 leading-tight">
                     Sosialisasi Dan Workshop Taman Bacaan
                 </h2>

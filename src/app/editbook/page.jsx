@@ -15,7 +15,6 @@ if (!session || !["admin", "petugas"].includes(session.user.role)) {
 
 const { id } = await searchParams;
 
-  // Fetch data buku
   const res = await fetch(`http://localhost:5000/buku/${id}`, {
     cache: 'no-store'
   });

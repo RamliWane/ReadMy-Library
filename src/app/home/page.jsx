@@ -112,7 +112,6 @@ export default async function HomePage() {
                 </div>
             </Sidebar>
 
-            {/* Right Sidebar - Fixed Position */}
             <div className="hidden xl:block w-70 shrink-0">
                 <div className="fixed top-0 right-0 ">
                     <RightBar />

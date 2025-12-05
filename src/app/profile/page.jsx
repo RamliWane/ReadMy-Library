@@ -2,11 +2,9 @@ import { Book, Calendar, User, Mail, Phone, MapPin, Clock, Edit, Settings, LogOu
 import Sidebar from '../components/Sidebar';
 
 export default async function Profile() {
-    // Ambil user ID dari session/cookies
-    // Contoh: dari cookies atau query parameter
-    const id = 1; // Ganti dengan cara ambil dari session/auth
+
+    const id = 1; 
     
-    // Fetch data user spesifik berdasarkan ID
     const user = await fetch(`http://localhost:5000/users/${id}`, { 
         method: "GET",
         cache: "no-store",
@@ -23,7 +21,6 @@ export default async function Profile() {
         return null;
     });
 
-    // Redirect ke login jika user tidak ditemukan
     if (!user) {
         return (
             <div className="min-h-screen bg-gradient-to-br from-[#ECF4E8] to-[#D4E7C5] flex items-center justify-center">
@@ -39,7 +36,6 @@ export default async function Profile() {
         <Sidebar>
             <div className="min-h-screen bg-gradient-to-br from-[#ECF4E8] to-[#D4E7C5] p-4 md:p-8">
                 <div className="max-w-5xl mx-auto animate-slide-up animate-delay-200">
-                    {/* Header Card */}
                     <div className="bg-white rounded-2xl shadow-lg overflow-hidden mb-6">
                         <div className="h-32 bg-gradient-to-r from-green-400 to-emerald-500"></div>
                         
@@ -96,7 +92,6 @@ export default async function Profile() {
                         </div>
                     </div>
 
-                    {/* Stats Cards */}
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
                         <div className="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition">
                             <div className="flex items-center justify-between">
@@ -135,7 +130,6 @@ export default async function Profile() {
                         </div>
                     </div>
 
-                    {/* Recent Activity */}
                     <div className="bg-white rounded-2xl shadow-lg p-6">
                         <h2 className="text-2xl font-bold text-gray-800 mb-4">Recent Activity</h2>
                         <div className="space-y-4">

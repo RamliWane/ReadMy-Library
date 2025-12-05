@@ -10,12 +10,10 @@ export default function BorrowButton({ idBuku }) {
       setLoading(true);
 
       const payload = {
-        id_user: 1, // ✅ Hard-code dulu, nanti diganti dengan session
+        id_user: 1,
         id_buku: idBuku,
         durasi_pinjam: durasiPinjam
       };
-
-      console.log("📦 Data yang dikirim:", payload); // Debug
 
       const res = await fetch("http://localhost:5000/peminjaman", {
         method: "POST",
@@ -26,7 +24,7 @@ export default function BorrowButton({ idBuku }) {
       });
 
       const json = await res.json();
-      console.log("Response:", json); // Debug
+      console.log("Response:", json); 
 
       if (!res.ok) {
         throw new Error(json.message || "Gagal meminjam");
@@ -47,7 +45,7 @@ export default function BorrowButton({ idBuku }) {
       <select 
         value={durasiPinjam}
         onChange={(e) => setDurasiPinjam(Number(e.target.value))}
-        className="px-3 py-2 border rounded-lg"
+        className="px-3 py-2 border rounded-lg text-black"
       >
         <option value={7}>7 hari</option>
         <option value={14}>14 hari</option>

@@ -8,7 +8,8 @@ import { signIn } from 'next-auth/react';
 import { redirect, useRouter } from 'next/navigation';
 
 
-const Form = () => {
+export default function Form (){
+
     const router = useRouter();
 
     async function handleLogin(formData) {
@@ -39,14 +40,11 @@ const Form = () => {
     const [showConfirmPassword, setShowConfirmPassword] = useState(false);
 
     return (
-        <div className="flex h-screen bg-black">
-            <link href="https://fonts.googleapis.com/css2?family=Happy+Monkey&display=swap" rel="stylesheet" />
-            <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300&display=swap" rel="stylesheet" />
-
+        <div className="flex h-screen justify-center">
             <div className="w-full md:w-2/5 bg-white flex items-center justify-center p-8">
                 <div className="w-full max-w-md">
                     <h1 className="text-4xl text-[#6DC700] mb-2" style={{ fontFamily: "'Happy Monkey', cursive" }}>Sign in</h1>
-                    <p className="text-gray-600 mb-8 font-bold" style={{ fontFamily: "'Hanken Grotesk', sans-serif" }}>
+                    <p className="text-gray-600 mb-8" style={{ fontFamily: "'Hanken Grotesk', Cursive" }}>
                         Enter your details to get sign in<br />to your account
                     </p>
 
@@ -137,9 +135,9 @@ const Form = () => {
                 </div>
             </div>
 
-            <div className="hidden md:block w-3/5 bg-[#f2f2f2]"></div>
+            <div className="hidden md:block lg:block max-w-2xl md:max-w-115 lg:max-w-xl lg:pt-20 md:pt-60">
+                <img className='rounded-xl' src="./login-image.png" alt="" />
+            </div>
         </div>
     );
 }
-
-export default Form
