@@ -1,6 +1,6 @@
 import React from "react";
 
-export default async function BookCard() {
+export default async function MasanryColumnBook() {
     const books = await fetch("http://localhost:5000/buku", {
         method: "GET",
         cache: "no-store",
@@ -9,36 +9,36 @@ export default async function BookCard() {
         .then(data => data.data);
 
     return (
-        <div className="grid justify-start p-3 grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 sm:gap-4 md:gap-5">
+        <div className="columns-2 sm:columns-3 lg:columns-4 gap-5 space-y-5">
             {books?.map(item => (
                 <a
                     href={`/detail?id=${item.id}`}
                     key={item.id || item.judul_buku}
-                    className="relative w-full group"
+                    className="relative block mb-5"
                 >
-                    <div className="rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+                    <div className="rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
                         <img
                             src={item.gambar}
                             alt={item.judul_buku}
-                            className="w-full h-[200px] sm:h-[250px] md:h-[280px] object-cover"
+                            className="w-full h-auto object-cover"
                         />
-                        <div className="absolute inset-0 bg-linear-to-t from-black/95 via-black/60 to-transparent"></div>
+                        <div className="absolute inset-0 from-black/95 via-black/60 to-transparent"></div>
 
-                        <div className="absolute bottom-0 left-0 w-full p-2 sm:p-3 flex flex-col justify-end">
+                        <div className="absolute bottom-0 left-0 w-full p-3 flex flex-col justify-end">
                             <span
-                                className="bg-[#6DC700] text-white text-[10px] sm:text-[12px] font-semibold px-2 py-1 rounded-lg mb-1 sm:mb-2 w-fit"
+                                className="bg-[#6DC700] text-white text-[12px] font-semibold px-2 py-1 rounded-lg mb-2 sm:mb-3 w-fit"
                                 style={{ fontFamily: "'Alexandria', sans-serif" }}
                             >
                                 {item.genre}
                             </span>
                             <h1
-                                className="text-white font-bold text-xs sm:text-sm md:text-base mb-1 line-clamp-2"
+                                className="text-white font-bold text-base sm:text-[13px] mb-1 sm:mb-2 line-clamp-2"
                                 style={{ fontFamily: "'Happy Monkey', cursive" }}
                             >
                                 {item.judul_buku}
                             </h1>
                             <p
-                                className="text-white/90 text-[10px] sm:text-xs"
+                                className="text-white/90 text-xs sm:text-[13px]"
                                 style={{ fontFamily: "'Alexandria', sans-serif" }}
                             >
                                 {item.pengarang}

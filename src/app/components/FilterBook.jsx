@@ -8,7 +8,7 @@ export default function FilterBook() {
     
     return (
         <div className="w-full flex overflow-x-auto pt-5 pb-2 px-2 flex-wrap">
-            <div className="flex gap-2 min-w-max">
+            <div className="flex flex-wrap gap-2 min-w-max">
                 {filters.map((filter) => (
                     <button 
                         key={filter}

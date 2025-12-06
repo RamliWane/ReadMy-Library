@@ -23,7 +23,7 @@ export default async function Profile() {
 
     if (!user) {
         return (
-            <div className="min-h-screen bg-gradient-to-br from-[#ECF4E8] to-[#D4E7C5] flex items-center justify-center">
+            <div className="min-h-screen bg-linear-to-br from-[#ECF4E8] to-[#D4E7C5] flex items-center justify-center">
                 <div className="bg-white p-8 rounded-2xl shadow-lg text-center">
                     <h2 className="text-2xl font-bold text-gray-800 mb-4">User tidak ditemukan</h2>
                     <a href="/login" className="text-blue-600 hover:underline">Kembali ke Login</a>
@@ -34,10 +34,10 @@ export default async function Profile() {
 
     return (
         <Sidebar>
-            <div className="min-h-screen bg-gradient-to-br from-[#ECF4E8] to-[#D4E7C5] p-4 md:p-8">
+            <div className="min-h-screen bg-linear-to-br from-[#ECF4E8] to-[#D4E7C5] p-4 md:p-8">
                 <div className="max-w-5xl mx-auto animate-slide-up animate-delay-200">
                     <div className="bg-white rounded-2xl shadow-lg overflow-hidden mb-6">
-                        <div className="h-32 bg-gradient-to-r from-green-400 to-emerald-500"></div>
+                        <div className="h-32 bg-linear-to-r from-green-400 to-emerald-500"></div>
                         
                         <div className="relative px-6 pb-6">
                             <div className="absolute -top-16 left-6">

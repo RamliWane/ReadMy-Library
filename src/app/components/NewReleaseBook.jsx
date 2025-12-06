@@ -1,26 +1,25 @@
 'use client'
-import { useRef } from 'react';
+import { useRef, useEffect, useState } from 'react';
 
-export default async function NewReleaseBook() {
+export default function NewReleaseBook() {
     const scrollRef = useRef(null);
+    const [books, setBooks] = useState([]);
+
+    // Fetch data pakai useEffect
+    useEffect(() => {
+        fetch("http://localhost:5000/buku")
+            .then(res => res.json())
+            .then(data => setBooks(data.data));
+    }, []);
 
     const scroll = (direction) => {
         if (scrollRef.current) {
-            const scrollAmount = 450;
             scrollRef.current.scrollBy({
-                left: direction === 'left' ? -scrollAmount : scrollAmount,
+                left: direction === 'left' ? -450 : 450,
                 behavior: 'smooth'
             });
         }
     };
-
-        const books = await fetch("http://localhost:5000/buku", {
-        method: "GET",
-        cache: "no-store",
-    })
-    .then(res => res.json())
-    .then(data => data.data);
-
     return (
         <div className="relative w-full">
             <button
@@ -46,7 +45,7 @@ export default async function NewReleaseBook() {
             >
                 <div className="flex w-max gap-3">
                         {books?.slice(10, 13).map(item => (
-                            <div className="max-w-md shrink-0">
+                            <div key={item.id} className="max-w-md shrink">
                                 <div className="relative w-[430px] h-auto bg-[#9E8D6E] shadow-xl rounded-xl overflow-hidden">
                                     <div className="relative z-0 flex flex-col md:flex-row items-center gap-5 p-5">
                                         <div className="shrink-0">

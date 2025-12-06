@@ -15,7 +15,7 @@ export default function DeleteButton({ id }) {
 
             if (response.ok) {
                 alert("Buku berhasil dihapus!");
-                window.location.reload(); // Refresh halaman
+                window.location.reload();
             } else {
                 alert("Gagal hapus buku");
             }

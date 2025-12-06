@@ -132,7 +132,7 @@ export default function BorrowPending() {
                     onClick={() => approve(item.id)}
                     className="flex-1 px-4 py-2.5 bg-linear-to-r from-green-500 to-emerald-600 text-white rounded-xl text-sm font-semibold shadow-md hover:shadow-lg hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 flex items-center justify-center gap-1"
                   >
-                    ✓ Setujui
+                    Setujui
                   </button>
                   <button
                     onClick={() => reject(item.id)}

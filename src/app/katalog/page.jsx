@@ -5,12 +5,13 @@ import SearcBar from "../components/SearchBar";
 import BookCard from "../components/BookCard";
 import HomeFooter from "../components/HomeFooter";
 import FilterActivity from "../components/FilterActivity";
+import MasanryColumnBook from "../components/MasanryColumnBook";
 
 
 export default function Katalog() {
     return (
         <Sidebar>
-            <div className="p-4 ">
+            <div className="">
                 <div className="flex-1 flex-wrap items-center animate-slide-up animate-delay-200">
                     <div className=" flex bg-white mt-2 w-full h-auto">
                         <section className="flex-1">
@@ -39,8 +40,8 @@ export default function Katalog() {
                             </div>
                             <hr className="border-t border-black my-4 mx-5" />
 
-                            <div className="mt-5">
-                                <BookCard />
+                            <div className="mt-5 m-10">
+                                <MasanryColumnBook />
                             </div>                            
                             <div className="mb-10">
                                 <HomeFooter />
