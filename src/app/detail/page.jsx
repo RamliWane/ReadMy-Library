@@ -89,7 +89,7 @@ export default function Detail() {
                             <div className="flex flex-wrap gap-8">
                                 <div className="flex flex-col gap-1">
                                     <span className="text-sm text-gray-600 font-medium" style={{ fontFamily: "'Hanken Grotesk', sans-serif" }}>Dapat Dipinjam</span>
-                                    <span className="text-2xl font-bold text-green-600" style={{ fontFamily: "'Hanken Grotesk', sans-serif" }}>5</span>
+                                    <span className="text-2xl font-bold text-green-600" style={{ fontFamily: "'Hanken Grotesk', sans-serif" }}>{book.stok}</span>
                                 </div>
 
                                 <div className="flex flex-col gap-1">
