@@ -10,29 +10,30 @@ import { redirect, useRouter } from 'next/navigation';
 
 export default function Form (){
 
-    const router = useRouter();
-
+    //ini function untuk handle login nya
     async function handleLogin(formData) {
         const response = await signIn("credentials", {
-            redirect: false,
-            username: formData.get("username"),
+            redirect: false, //di set false karna supaya user nya bisa pindah halaman sendiri
             email: formData.get("email"),
             password: formData.get("password"),
         });
 
+        //ini buat cek loginnya berhasil atau kaga, dan kalo gagal return nya berhenti
         if (!response?.ok) {
             alert("Login gagal!");
             return;
         }
 
+        //fetch data dari session
         const respon = await fetch('/api/auth/session');
         const data = await respon.json();
         const role = data?.user?.role;
 
-        if (role !== 'admin', 'petugas') {
-        redirect('/home');
-        }else {
-        redirect('/dashboard');
+        //ini buat pindah halaman sesuai role
+        if (role !== 'admin' && role !== 'petugas') {
+            redirect('/home');
+        } else {
+            redirect('/dashboard');
         }
     }
 

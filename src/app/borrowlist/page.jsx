@@ -6,12 +6,14 @@ import { redirect } from "next/navigation";
 import { authOptions } from "../api/auth/[...nextauth]/route";
 export default async function BorrowListPage() {
 
-    const session = await getServerSession(authOptions);
-    console.log(session);
+// Ambil session dari server
+const session = await getServerSession(authOptions);
+console.log(session); 
 
-    const user = session?.user;
+const user = session?.user; // Ambil data user dari session
 
-    if (!session || !["admin", "petugas"].includes(session.user.role)) {
+//kalo gak login atau role bukan admin/petugas
+if (!session || !["admin", "petugas"].includes(session.user.role)) {
   redirect("/forbidden");
 }
 

@@ -10,7 +10,7 @@ export default async function BookCard() {
 
     return (
         <div className="grid justify-start p-3 grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 sm:gap-4 md:gap-5">
-            {books?.map(item => (
+            {books?.slice(0,10).map(item => (
                 <a
                     href={`/detail?id=${item.id}`}
                     key={item.id || item.judul_buku}

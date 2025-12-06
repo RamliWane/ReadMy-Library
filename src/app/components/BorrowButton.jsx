@@ -1,7 +1,9 @@
 "use client";
 import { useState } from "react";
+import { useSession } from "next-auth/react";
 
 export default function BorrowButton({ idBuku }) {
+  const { data: session } = useSession();
   const [durasiPinjam, setDurasiPinjam] = useState(7);
   const [loading, setLoading] = useState(false);
 
@@ -10,7 +12,7 @@ export default function BorrowButton({ idBuku }) {
       setLoading(true);
 
       const payload = {
-        id_user: 1,
+        id_user: session?.user?.id,
         id_buku: idBuku,
         durasi_pinjam: durasiPinjam
       };
@@ -54,7 +56,7 @@ export default function BorrowButton({ idBuku }) {
 
       <button
         onClick={handleBorrow}
-        disabled={loading}
+        disabled={loading || !session}
         className="bg-black text-white px-4 py-2 rounded-lg hover:bg-gray-800 disabled:bg-gray-400"
       >
         {loading ? "Memproses..." : "Borrow — Pinjam Buku"}

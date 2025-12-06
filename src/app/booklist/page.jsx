@@ -7,11 +7,13 @@ import { authOptions } from "../api/auth/[...nextauth]/route";
 import { Delete } from "lucide-react";
 export default async function BookListPage() {
 
-    const session = await getServerSession(authOptions);
-    console.log(session);
+// Ambil session dari server
+const session = await getServerSession(authOptions);
+console.log(session); 
 
-    const user = session?.user;
+const user = session?.user; // Ambil data user dari session
 
+//kalo gak login atau role bukan admin/petugas
 if (!session || !["admin", "petugas"].includes(session.user.role)) {
   redirect("/forbidden");
 }

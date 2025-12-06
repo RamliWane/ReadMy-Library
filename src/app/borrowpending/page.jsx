@@ -5,15 +5,16 @@ import { redirect } from "next/navigation";
 import { authOptions } from "../api/auth/[...nextauth]/route";
 
 export default async function BorrowPendingPage() {
+// Ambil session dari server
+const session = await getServerSession(authOptions);
+console.log(session); 
 
-    const session = await getServerSession(authOptions);
-    console.log(session);
+const user = session?.user; // Ambil data user dari session
 
-    const user = session?.user;
-
-    if (!session || !["admin", "petugas"].includes(session.user.role)) {
-    redirect("/forbidden");
-    }
+//kalo gak login atau role bukan admin/petugas
+if (!session || !["admin", "petugas"].includes(session.user.role)) {
+  redirect("/forbidden");
+}
 
     return (
         <SidebarAdmin>

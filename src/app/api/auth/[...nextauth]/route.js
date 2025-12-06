@@ -31,7 +31,7 @@ export const authOptions = {
                 //4. simpan data ke session
                 return {
                     id: user.id,
-                    name: user.username,
+                    username: user.username,
                     role: user.role,
                     email: user.email
                 }
@@ -43,7 +43,7 @@ export const authOptions = {
             // Persist the OAuth access_token and or the user id to the token right after signin
             if (user) {
                 token.id = user.id;
-                token.name = user.username;
+                token.username = user.username;  
                 token.role = user.role;
                 token.email = user.email;
             }
@@ -53,7 +53,7 @@ export const authOptions = {
         async session({ session, token }) {
             // Send properties to the client, like an access_token and user id from a provider.
             session.user.id = token.id;
-            session.user.name = token.name;
+            session.user.username = token.username;
             session.user.role = token.role;
             session.user.email = token.email;
 

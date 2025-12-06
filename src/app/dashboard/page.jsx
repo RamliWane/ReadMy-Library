@@ -7,13 +7,16 @@ import { authOptions } from "../api/auth/[...nextauth]/route";
 import InputBook from '../components/admin/InputBook';
   
 export default async function DashboardPerpustakaan() {
-    
-  
+  // Ambil session dari server
   const session = await getServerSession(authOptions);
-  
-if (!session || !["admin", "petugas"].includes(session.user.role)) {
-  redirect("/forbidden");
-}
+  console.log(session); 
+
+  const user = session?.user; // Ambil data user dari session
+
+  //kalo gak login atau role bukan admin/petugas
+  if (!session || !["admin", "petugas"].includes(session.user.role)) {
+    redirect("/forbidden");
+  }
   
   return (
     <SidebarAdmin>
@@ -32,7 +35,7 @@ if (!session || !["admin", "petugas"].includes(session.user.role)) {
                   <Book className="w-6 h-6 text-white" />
                 </div>
               </div>
-              <h3 className="text-2xl font-bold text-slate-800 mb-1">2,543</h3>
+              <h3 className="text-2xl font-bold text-slate-800 mb-1">0</h3>
               <p className="text-sm text-slate-500">Total Buku</p>
             </div>
 
@@ -42,7 +45,7 @@ if (!session || !["admin", "petugas"].includes(session.user.role)) {
                   <Users className="w-6 h-6 text-white" />
                 </div>
               </div>
-              <h3 className="text-2xl font-bold text-slate-800 mb-1">1,284</h3>
+              <h3 className="text-2xl font-bold text-slate-800 mb-1">0</h3>
               <p className="text-sm text-slate-500">Anggota Aktif</p>
             </div>
 
@@ -52,7 +55,7 @@ if (!session || !["admin", "petugas"].includes(session.user.role)) {
                   <BookOpen className="w-6 h-6 text-white" />
                 </div>
               </div>
-              <h3 className="text-2xl font-bold text-slate-800 mb-1">156</h3>
+              <h3 className="text-2xl font-bold text-slate-800 mb-1">0</h3>
               <p className="text-sm text-slate-500">Buku Dipinjam</p>
             </div>
 
@@ -62,7 +65,7 @@ if (!session || !["admin", "petugas"].includes(session.user.role)) {
                   <TrendingUp className="w-6 h-6 text-white" />
                 </div>
               </div>
-              <h3 className="text-2xl font-bold text-slate-800 mb-1">89</h3>
+              <h3 className="text-2xl font-bold text-slate-800 mb-1">0</h3>
               <p className="text-sm text-slate-500">Peminjaman Hari Ini</p>
             </div>
           </div>

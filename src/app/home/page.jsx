@@ -8,12 +8,14 @@ import Sidebar from "../components/Sidebar";
 import NewReleaseBook from "../components/NewReleaseBook";
 
 export default async function HomePage() {
-    const users = await fetch("http://localhost:5000/users", {
-        method: "GET",
-        cache: "no-store",
-    })
-        .then(res => res.json())
-        .then(data => data.data);
+
+// Fetch data users dari API
+const users = await fetch("http://localhost:5000/users", {
+    method: "GET",
+    cache: "no-store",
+})
+    .then(res => res.json())// Convert response jadi JSON
+    .then(data => data.data);// Ambil property 'data' dari response
 
     return (
         <div className="flex w-full min-h-screen bg-gray-50 ">
