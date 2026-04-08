@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { usePathname } from "next/navigation";
-import { Book, Users, Menu, Bell, User, Home, Settings, LogOut, Search } from 'lucide-react';
+import { Book, Users, Home, Settings, LogOut, Search } from 'lucide-react';
 
 export default function Sidebar({ children, users }) {
   const [isOpen, setIsOpen] = useState(false);
