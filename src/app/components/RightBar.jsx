@@ -10,11 +10,11 @@ export default async function AuthorSidebar() {
     .then(data => data.data);
 
   return (
-    <div className="sticky h-screen flex w-full max-w-[18rem] flex-col bg-white pt-15 text-gray-700 shadow-xl">
-      <div className="px-6 py-5">
+    <div className="flex max-w-[18rem] flex-col bg-white text-gray-700 shadow-xl">
+      <div className="px-6 py-4">
         <div className="flex items-center gap-2 mb-4">
           <Users className="w-5 h-5 text-green-600" />
-          <span className="text-sm font-bold text-gray-800">Popular Authors</span>
+          <span className="text-sm font-bold text-gray-800">POPULAR OUTHOR</span>
         </div>
 
         <div className="space-y-2">

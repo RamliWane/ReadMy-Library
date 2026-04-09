@@ -97,14 +97,8 @@ const users = await fetch("http://localhost:5000/users", {
                                     <FilterActivity />
                                 </div>
                             </div>
-                            <div className="grid lg:grid-cols-3 md:grid-cols-3 grid-cols-1 gap-3 m-4">
+                            <div className=" gap-3 m-4">
                                 <div className="animate-slide-up animate-delay-300">
-                                    <LiterasiAct />
-                                </div>
-                                <div className="animate-slide-up animate-delay-400">
-                                    <LiterasiAct />
-                                </div>
-                                <div className="animate-slide-up animate-delay-500">
                                     <LiterasiAct />
                                 </div>
                             </div>
