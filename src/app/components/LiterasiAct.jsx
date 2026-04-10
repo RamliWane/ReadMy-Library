@@ -1,9 +1,10 @@
+//codingan LiterasiAct
 import React from "react";
 import { Mic, Clock, MapPin } from 'lucide-react';
 
 export default function LiterasiAct() {
     return (
-        <div className="flex gap-3">
+        <div className="flex flex-col sm:flex-row gap-3">
             <div className="w-full bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
                 <div className="relative h-48 bg-linear-to-br from-gray-700 to-gray-900">
                     <img

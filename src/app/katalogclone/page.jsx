@@ -7,7 +7,7 @@ import MasanryColumnBook from "../components/MasanryColumnBook";
 import HomeFooter from "../components/HomeFooter";
 
 
-export default function Katalog() {
+export default function KatalogClone() {
     return (
         <div className="h-screen flex flex-col overflow-y-auto overflow-x-hidden text-black">
             <NavbarClone />
@@ -27,10 +27,9 @@ export default function Katalog() {
                                 <div className="flex justify-start flex-col flex-wrap">
                                     <div className="flex flex-col text-start ml-5 mt-4">
                                         <h1
-                                            className="text-xl lg:text-xl text-black"
-                                            style={{ fontFamily: "'Happy Monkey', cursive" }}
+                                            className="text-xl font-bold text-black"
                                         >
-                                            <span className="text-[#6DC700]">Katalog Buku</span>
+                                            <span>KATALOG CLONE</span>
                                         </h1>
                                         <p
                                             className="text-[14px] text-black"

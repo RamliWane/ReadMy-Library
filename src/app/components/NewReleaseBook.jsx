@@ -1,3 +1,4 @@
+//codingan NewReleaseBook
 'use client'
 import { useRef, useEffect, useState } from 'react';
 
@@ -15,7 +16,9 @@ export default function NewReleaseBook() {
             .then(data => setBooks(data.data));
     }, []);
 
-    const scroll = (direction) => {
+    const handleScroll = (direction) => {
+            console.log('scroll clicked', direction, scrollRef.current);
+
         if (scrollRef.current) {
             scrollRef.current.scrollBy({
                 left: direction === 'left' ? -450 : 450,
@@ -23,74 +26,70 @@ export default function NewReleaseBook() {
             });
         }
     };
+
     return (
         <div className="relative w-full">
-            <button
-                onClick={() => scroll('left')}
-                className="absolute left-2 top-1/2 -translate-y-1/2 z-10 bg-white/80 hover:bg-white p-1 rounded-full shadow-lg"
-            >
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-                </svg>
-            </button>
-            <button
-                onClick={() => scroll('right')}
-                className="absolute right-2 top-1/2 -translate-y-1/2 z-10 bg-white/80 hover:bg-white p-1 rounded-full shadow-lg"
-            >
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-            </button>
+                <button
+                    onClick={() => handleScroll('left')}
+                    className="absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-white/80 hover:bg-white p-1 rounded-full shadow-lg"
+                >
+                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                    </svg>
+                </button>
+                <button
+                    onClick={() => handleScroll('right')}
+                    className="sticky right-2 top-1/2 -translate-y-1/2 z-20 bg-white/80 hover:bg-white p-1 rounded-full shadow-lg"
+                >
+                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                </button>
 
-            <section 
+            <section  
                 ref={scrollRef}
-                className="w-full overflow-x-scroll p-1 no-scrollbar"
+                className="max-w-full overflow-x-auto p-1 no-scrollbar px-8"
             >
                 <div className="flex w-max gap-3">
-                        {books?.slice(10, 16).map(item => (
-                            <div key={item.id} className="max-w-md shrink">
-                                <a href={`/detail?id=${item.id}`}
-                                    key={item.id || item.judul_buku}>
-                                    <div className="relative w-100 h-50 p-4 bg-[#9E8D6E] rounded-xl overflow-hidden">
-                                        <div className="relative flex flex-col md:flex-row items-center justify-center gap-4">
-                                            <div className="shrink-0">
-                                                <img
-                                                    src={item.gambar}
-                                                    alt={item.judul_buku}
-                                                    className="w-25 h-auto rounded-xl"
-                                                />
-                                            </div>
+                    {books?.slice(10, 16).map(item => (
+                        <div key={item.id} className="w-[280px] sm:w-[380px] shrink-0">
+                        <a href={`/detail?id=${item.id}`}>
+                            <div className="relative w-full h-[160px] sm:h-[180px] p-4 bg-[#9E8D6E] rounded-xl overflow-hidden">
+                            <div className="relative flex flex-row items-start gap-4 h-full">
+                                <div className="shrink-0">
+                                <img
+                                    src={item.gambar}
+                                    alt={item.judul_buku}
+                                    className="w-20 sm:w-25 h-auto rounded-xl"
+                                />
+                                </div>
 
-                                            <div className="flex flex-col gap-2 text-white">
-                                                <h1 className="text-xl font-bold leading-tight" style={{ fontFamily: "'Happy Monkey', cursive" }}>
-                                                    {item.judul_buku}
-                                                </h1>
+                                <div className="flex flex-col gap-2 text-white min-w-0">
+                                <h1 className="text-sm sm:text-xl font-bold leading-tight line-clamp-2" style={{ fontFamily: "'Happy Monkey', cursive" }}>
+                                    {item.judul_buku}
+                                </h1>
 
-                                                <p className="text-[14px] font-light" style={{ fontFamily: "'Hanken Grotesk', sans-serif" }}>
-                                                    {item.pengarang}
-                                                </p>
+                                <p className="text-[12px] sm:text-[14px] font-light" style={{ fontFamily: "'Hanken Grotesk', sans-serif" }}>
+                                    {item.pengarang}
+                                </p>
 
-                                                <div className="flex gap-1">
-                                                    {[1, 2, 3, 4, 5].map((star) => (
-                                                        <svg
-                                                            key={star}
-                                                            className="w-4 h-4 fill-white"
-                                                            viewBox="0 0 24 24"
-                                                        >
-                                                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                                                        </svg>
-                                                    ))}
-                                                </div>
+                                <div className="flex gap-1">
+                                    {[1, 2, 3, 4, 5].map((star) => (
+                                    <svg key={star} className="w-3 h-3 sm:w-4 sm:h-4 fill-white" viewBox="0 0 24 24">
+                                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                    </svg>
+                                    ))}
+                                </div>
 
-                                                <p className="text-[15px] leading-relaxed text-white" style={{ fontFamily: "'Hanken Grotesk', sans-serif" }}>
-                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
+                                <p className="text-[12px] sm:text-[15px] leading-relaxed text-white line-clamp-3" style={{ fontFamily: "'Hanken Grotesk', sans-serif" }}>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
+                                </p>
+                                </div>
                             </div>
-                        ))}
+                            </div>
+                        </a>
+                        </div>
+                    ))}
                 </div>
             </section>
 

@@ -1,3 +1,4 @@
+//codingan homeclone
 import NavbarClone from "../components/NavbarClone";
 import SideBarClone from "../components/SideBarClone";
 import NewReleaseBook from "../components/NewReleaseBook";
@@ -20,18 +21,11 @@ export default async function homeclone() {
         <div className="h-screen flex flex-col overflow-hidden text-black">
             <NavbarClone />
             <div className="flex flex-1 overflow-hidden">
-                <SideBarClone users={users} className="w-100 flex-0" />
+                <SideBarClone users={users} className=" flex-0" />
 
-                <div className="grid overflow-y-auto no-scrollbar grid-cols-[1.9fr_1.9fr_1fr] grid-rows-[auto_auto_auto] justify-center" style={{
-                    gridTemplateAreas:
-                        `
-              "header header aside"
-              "main main aside"
-              "footer footer aside"
-            `
-                }}>
+                <div className="main-grid overflow-y-auto no-scrollbar grid-rows-[auto_auto_auto]">
                     <header className="flex-1 p-6 [grid-area:header]">
-                        <div className="flex flex-col">
+                        <div className="flex flex-col min-w-0">
                             <h1 className="text-[17px] font-bold">TRENDING BOOK</h1>
                             <NewReleaseBook />
                         </div>
@@ -46,11 +40,7 @@ export default async function homeclone() {
                     <main className="flex [grid-area:main] flex-col p-8 gap-6">
                         <div className="flex flex-col gap-4">
                             <h1 className="text-[17px] font-bold">RECENTLY PLAYED</h1>
-                            <div className="flex gap-6">
-                                <div className="flex flex-col">
-                                    <BookCard />
-                                </div>
-                            </div>
+                                <BookCard />
                         </div>
 
                         <div className="flex flex-col gap-2">

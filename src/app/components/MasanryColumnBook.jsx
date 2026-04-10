@@ -12,7 +12,7 @@ export default async function MasanryColumnBook() {
         <div className="columns-2 sm:columns-3 lg:columns-4 gap-5 space-y-5">
             {books?.map(item => (
                 <a
-                    href={`/detail?id=${item.id}`}
+                    href={`/detailclone?id=${item.id}`}
                     key={item.id || item.judul_buku}
                     className="relative block mb-5"
                 >
@@ -32,13 +32,13 @@ export default async function MasanryColumnBook() {
                                 {item.genre}
                             </span>
                             <h1
-                                className="text-white font-bold text-base sm:text-[13px] mb-1 sm:mb-2 line-clamp-2"
+                                className="text-black font-bold text-base sm:text-[20px] mb-1 sm:mb-2 line-clamp-2"
                                 style={{ fontFamily: "'Happy Monkey', cursive" }}
                             >
                                 {item.judul_buku}
                             </h1>
                             <p
-                                className="text-white/90 text-xs sm:text-[13px]"
+                                className="text-black text-xs sm:text-[13px]"
                                 style={{ fontFamily: "'Alexandria', sans-serif" }}
                             >
                                 {item.pengarang}

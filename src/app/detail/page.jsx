@@ -10,6 +10,7 @@ import { useSearchParams } from "next/navigation";
 
 export default function Detail() {
 
+
     const searchParams = useSearchParams();
     const id = searchParams.get("id");
 
