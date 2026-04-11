@@ -38,10 +38,10 @@ export default function KatalogClone() {
                                             Lorem ipsum dolor sit amet, consectetur adipiscing
                                         </p>
                                     </div>
-                                    <div className="pl-5">
+                                    <div className="pl-5 pt-2">
                                         <SearchBar />
                                     </div>
-                                    <div className="pl-5">
+                                    <div className="pl-3 pt-2">
                                         <FilterBook />
                                     </div>
 

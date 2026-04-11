@@ -6,6 +6,7 @@ import BookCard from "../components/BookCard";
 import RightBar from "../components/RightBar";
 import LiterasiAct from "../components/LiterasiAct";
 import HomeFooter from "../components/HomeFooter";
+import FilterBook from "../components/FilterBook";
 
 export default async function homeclone() {
 
@@ -49,9 +50,14 @@ export default async function homeclone() {
 
                     <main className="flex [grid-area:main] flex-col m-5">
                         <div className="flex flex-col gap-3 ">
-                            <section>
-                                <h1 className="text-[17px] font-bold">RECENTLY PLAYED</h1>
-                                <h1 className="text-[13px] font-mono">Tingkatkan Literasi Mu!</h1>
+                            <section className="flex items-start justify-between gap-2 flex-wrap">
+                                <div className="flex flex-col">
+                                    <h1 className="text-[17px] font-bold">RECENTLY PLAYED</h1>
+                                    <h1 className="text-[13px] font-mono">Tingkatkan Literasi Mu!</h1>
+                                </div>
+                                <div className="ml-auto">
+                                    <FilterBook />
+                                </div>
                             </section>
                             <BookCard books={books}/>
                         </div>

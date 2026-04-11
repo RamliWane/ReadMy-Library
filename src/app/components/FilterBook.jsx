@@ -7,13 +7,13 @@ export default function FilterBook() {
     const [activeFilter, setActiveFilter] = React.useState("Semua");
     
     return (
-        <div className="w-full pt-5 pb-2 px-2">
+        <div className="w-full px-2">
             <div className="flex flex-wrap gap-2">
                 {filters.map((filter) => (
                     <button 
                         key={filter}
                         onClick={() => setActiveFilter(filter)}
-                        className={`px-3 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-sm rounded-md transition-colors whitespace-nowrap ${
+                        className={` px-3 sm:px-4 py-1.5 sm:py-1 text-[13px] sm:text-[13px] rounded-md transition-colors whitespace-nowrap ${
                             activeFilter === filter
                                 ? "bg-green-500 text-white hover:bg-green-600"
                                 : "bg-white text-gray-700 border border-gray-300 hover:bg-gray-50"

@@ -24,7 +24,13 @@ export default async function AuthorSidebar() {
               className="flex items-start gap-3 p-3 rounded-xl hover:bg-gray-50 transition-all cursor-pointer group border border-transparent hover:border-gray-200"
             >
               <div className="relative">
-                <div className="w-14 h-14 rounded-full bg-gray-200 ring-2 ring-gray-100 group-hover:ring-green-200 transition-all"></div>
+                <div className="w-14 h-14 rounded-full bg-gray-200 ring-2 ring-gray-100 group-hover:ring-green-200 transition-all">
+                  <img
+                    src={item.image}
+                    alt={item.name}
+                    className="w-full h-full object-cover rounded-full"
+                  />
+                </div>
               </div>
 
               <div className="flex-1 min-w-0">
