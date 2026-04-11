@@ -24,8 +24,7 @@ export default async function BookList() {
           <p className="text-sm text-gray-500">Semua buku</p>
         </div>
       </div>
-      <div className="space-y-3 max-h-118 overflow-y-auto pr-2">
-        <>
+      <div className="space-y-3 no-scrollbar max-h-118 overflow-y-auto pr-2">
           {book?.map((item) => (
             <div key={item.id}
               className="group p-4 bg-white rounded-2xl border-2 border-gray-100 hover:border-emerald-300 hover:shadow-md transition-all duration-200"
@@ -70,7 +69,6 @@ export default async function BookList() {
               </div>
             </div>
           ))}
-        </>
       </div>
     </div>
   )

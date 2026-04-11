@@ -54,7 +54,7 @@ export default function NewReleaseBook() {
                     {books?.slice(10, 16).map(item => (
                         <div key={item.id} className="w-[280px] sm:w-[380px] shrink-0">
                         <a href={`/detail?id=${item.id}`}>
-                            <div className="relative w-full h-[160px] sm:h-[180px] p-4 bg-[#9E8D6E] rounded-xl overflow-hidden">
+                            <div className="relative w-full h-[170px] sm:h-[180px] p-4 bg-[#9E8D6E] rounded-xl overflow-hidden">
                             <div className="relative flex flex-row items-start gap-4 h-full">
                                 <div className="shrink-0">
                                 <img

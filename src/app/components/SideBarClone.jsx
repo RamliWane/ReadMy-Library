@@ -9,7 +9,7 @@ export default function SidebarClone() {
     const pathname = usePathname();
 
     return (
-        <div className={`h-screen transform transition-all duration-300 overflow-hidden shrink-0
+        <div className={`h-screen transform transition-all border-r border-gray-300 duration-300 overflow-hidden shrink-0
             ${isOpen ? "translate-x-0 w-50" : "-translate-x-full w-0"}
             lg:translate-x-0 lg:w-50`}>
 
@@ -19,9 +19,14 @@ export default function SidebarClone() {
                     <ul className="space-x-2">
                         {libraryNav.map((item) => (
                             <Link href={item.href} key={item.label}>
-                                <li className={`flex items-center gap-1 cursor-pointer ${pathname === item.href ? "text-blue-600" : "hover:text-blue-600 text-gray-500"}`}>
-                                    {item.icon}
-                                    {item.label}
+                                <li className={`flex items-center gap-8 cursor-pointer ${pathname === item.href ? "text-blue-600" : "hover:text-blue-600 text-gray-500"}`}>    
+                                    <div className="flex gap-2">    
+                                        {item.icon}
+                                        {item.label}
+                                    </div>
+                                    {pathname === item.href && (
+                                        <div className="w-1.5 h-6 pl-1 bg-blue-500 rounded-full"/>
+                                    )}
                                 </li>
                             </Link>
                         ))}
