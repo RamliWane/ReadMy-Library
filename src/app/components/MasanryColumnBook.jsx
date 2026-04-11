@@ -26,7 +26,7 @@ export default async function MasanryColumnBook() {
 
                         <div className="absolute bottom-0 left-0 w-full p-3 flex flex-col justify-end">
                             <span
-                                className="bg-[#6DC700] text-white text-[12px] font-semibold px-2 py-1 rounded-lg mb-2 sm:mb-3 w-fit"
+                                className="bg-[#6DC700] text-white text-[10px] sm:text-[10px] md:text-[12px] lg:text-[14px] font-semibold px-2 py-1 rounded-lg mb-2 sm:mb-3 w-fit"
                                 style={{ fontFamily: "'Alexandria', sans-serif" }}
                             >
                                 {item.genre}

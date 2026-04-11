@@ -5,6 +5,7 @@ import SidebarClone from "../components/SideBarClone"
 import BorrowButton from "../components/BorrowButton";
 import { useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
+import BookCard from "../components/BookCard";
 
 export default function DetailClone() {
     
@@ -26,7 +27,7 @@ export default function DetailClone() {
         <div className="h-screen flex flex-col overflow-hidden text-black">
             <Navbar />
             <div className="flex flex-1 overflow-hidden">
-                <SidebarClone className="w-100 flex-0" />
+                <SidebarClone className="w-64 flex-0" />
 
                 <div className="grid grid-cols-[1.9fr] grid-rows-[auto_auto] justify-center lg:p-10 md:p-8" style={{
                     gridTemplateAreas:
@@ -34,7 +35,7 @@ export default function DetailClone() {
                   "main main"
                 `
                 }}>
-                    <div className=" w-full overflow-x-hidden overflow-y-autooverflow-y-auto no-scrollbar">
+                    <div className=" w-full overflow-x-hidden overflow-y-autooverflow-y-auto no-scrollbar p-4">
                         <section className=" justify-center [grid-area:main]">
                             <div className="max-w-auto mx-auto py-12 lg:py-16">
                                 <div className="flex flex-col lg:flex-row gap-8 lg:gap-12">
@@ -82,8 +83,8 @@ export default function DetailClone() {
                             </div>
                         </section>
 
-                        <section className="max-w-7xl mx-auto px-6 py-3">
-                            <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
+                        <section className="max-w-screen mx-auto px-3 mb-2">
+                            <div className="bg-white border border-gray-200 rounded-xl p-3 shadow-sm hover:shadow-md transition-shadow">
                                 <h2 className="text-lg font-semibold text-gray-800 mb-5" style={{ fontFamily: "'Hanken Grotesk', sans-serif" }}>
                                     Tersedia di:
                                 </h2>

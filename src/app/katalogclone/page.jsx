@@ -29,7 +29,7 @@ export default function KatalogClone() {
                                         <h1
                                             className="text-xl font-bold text-black"
                                         >
-                                            <span>KATALOG CLONE</span>
+                                            <span>KATALOG BUKU</span>
                                         </h1>
                                         <p
                                             className="text-[14px] text-black"

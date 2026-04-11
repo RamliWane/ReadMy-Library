@@ -7,8 +7,8 @@ export default function FilterBook() {
     const [activeFilter, setActiveFilter] = React.useState("Semua");
     
     return (
-        <div className="w-full flex overflow-x-auto pt-5 pb-2 px-2 flex-wrap">
-            <div className="flex flex-wrap gap-2 min-w-max">
+        <div className="w-full pt-5 pb-2 px-2">
+            <div className="flex flex-wrap gap-2">
                 {filters.map((filter) => (
                     <button 
                         key={filter}

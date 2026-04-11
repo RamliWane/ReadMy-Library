@@ -21,7 +21,7 @@ export default function NewReleaseBook() {
 
         if (scrollRef.current) {
             scrollRef.current.scrollBy({
-                left: direction === 'left' ? -450 : 450,
+                left: direction === 'left' ? -250 : 250,
                 behavior: 'smooth'
             });
         }
@@ -31,7 +31,7 @@ export default function NewReleaseBook() {
         <div className="relative w-full">
                 <button
                     onClick={() => handleScroll('left')}
-                    className="absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-white/80 hover:bg-white p-1 rounded-full shadow-lg"
+                    className="absolute left-0 top-1/2 -translate-y-1/2 z-20 bg-white/80 hover:bg-white p-1 rounded-full shadow-lg"
                 >
                     <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -39,7 +39,7 @@ export default function NewReleaseBook() {
                 </button>
                 <button
                     onClick={() => handleScroll('right')}
-                    className="sticky right-2 top-1/2 -translate-y-1/2 z-20 bg-white/80 hover:bg-white p-1 rounded-full shadow-lg"
+                    className="absolute right-0 sm:right-0 md:right-0 lg:right-0 top-1/2 -translate-y-1/2 z-20 bg-white/80 hover:bg-white p-1 rounded-full shadow-lg"
                 >
                     <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -48,9 +48,9 @@ export default function NewReleaseBook() {
 
             <section  
                 ref={scrollRef}
-                className="max-w-full overflow-x-auto p-1 no-scrollbar px-8"
+                className="max-w-full overflow-x-auto no-scrollbar px-5 sm:px-8 md:px-8 lg:px-0"
             >
-                <div className="flex w-max gap-3">
+                <div className="flex w-max gap-5">
                     {books?.slice(10, 16).map(item => (
                         <div key={item.id} className="w-[280px] sm:w-[380px] shrink-0">
                         <a href={`/detail?id=${item.id}`}>

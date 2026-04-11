@@ -1,21 +1,9 @@
 import Image from "next/image";
 export default function Navbar() {
     return (
-        <div className="w-full  h-16 bg-white shadow-lg flex items-center justify-between px-6 py-2">
+        <div className="w-full h-16 bg-white shadow-lg flex items-center justify-between px-6 py-2">
             <div className="flex items-center gap-8">
                 <h1 className="font-bold text-[20px] text-blue-600">ReadMy Library</h1>
-
-                <ul className="flex ml-2 md:ml-15 gap-4">
-                    <li className="text-[11px] font-bold cursor-pointer">
-                        NEW RELEASE
-                    </li>
-                    <li className="text-[11px] font-bold cursor-pointer">
-                        NEW RELEASE
-                    </li>
-                    <li className="text-[11px] font-bold cursor-pointer">
-                        NEW RELEASE
-                    </li>
-                </ul>
             </div>
 
             <div className="flex text-[13px] font-bold gap-2">

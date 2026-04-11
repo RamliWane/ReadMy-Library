@@ -19,7 +19,7 @@ export const libraryNav = [
   },
   {
     label: "Katalog",
-    href: "/katalog",
+    href: "/katalogclone",
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg"
                         fill="none"
