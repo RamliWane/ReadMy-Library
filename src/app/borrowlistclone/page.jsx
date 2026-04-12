@@ -1,17 +1,12 @@
 import NavbarClone from "../components/NavbarClone";
-import SidebarClone from "../components/SideBarClone";
-import SearchBar from "../components/SearchBar";
-import FilterBook from "../components/FilterBook";
-import MasanryColumnBook from "../components/MasanryColumnBook";
-import HomeFooter from "../components/HomeFooter";
-
+import SidebarAdminClone from "../components/admin/SidebarAdminClone";
 
 export default function KatalogClone() {
     return (
         <div className="h-screen flex flex-col overflow-y-auto overflow-x-hidden text-black">
             <NavbarClone />
             <div className="flex flex-1 overflow-hidden">
-                <SidebarClone className="w-64 flex-0" />
+                <SidebarAdminClone className="w-64 flex-0" />
 
                 <div className="grid overflow-y-auto no-scrollbar grid-cols-[1.7fr_1.7fr] grid-rows-[1fr_1fr] justify-center" style={{
                     gridTemplateAreas:
@@ -37,22 +32,8 @@ export default function KatalogClone() {
                                             Lorem ipsum dolor sit amet, consectetur adipiscing
                                         </p>
                                     </div>
-                                    <div className="pl-5 pt-2">
-                                        <SearchBar />
-                                    </div>
-                                    <div className="pl-3 pt-2">
-                                        <FilterBook />
-                                    </div>
-
                                 </div>
                                 <hr className="border-t border-black my-4 mx-5" />
-
-                                <div className="mt-5 m-10">
-                                    <MasanryColumnBook />
-                                </div>
-                                <div className="mb-10">
-                                    <HomeFooter />
-                                </div>
                             </section>
                         </div>
                     </div>

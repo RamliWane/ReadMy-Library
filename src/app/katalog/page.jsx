@@ -1,10 +1,7 @@
 import FilterBook from "../components/FilterBook";
 import Sidebar from "../components/Sidebar";
-import RightBar from "../components/RightBar";
 import SearcBar from "../components/SearchBar";
-import BookCard from "../components/BookCard";
 import HomeFooter from "../components/HomeFooter";
-import FilterActivity from "../components/FilterActivity";
 import MasanryColumnBook from "../components/MasanryColumnBook";
 
 
