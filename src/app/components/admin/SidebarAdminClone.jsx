@@ -19,7 +19,7 @@ export default function SidebarClone() {
                     <ul className="space-x-2">
                         {AdminNavigation.map((item) => (
                             <Link href={item.href} key={item.label}>
-                                <li className={`flex items-center gap-8 cursor-pointer ${pathname === item.href ? "text-blue-600" : "hover:text-blue-600 text-gray-500"}`}>    
+                                <li className={`flex items-center justify-between gap-5 cursor-pointer ${pathname === item.href ? "text-blue-600" : "hover:text-blue-600 text-gray-500"}`}>    
                                     <div className="flex gap-2">    
                                         {item.icon}
                                         {item.label}

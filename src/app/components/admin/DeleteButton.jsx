@@ -29,7 +29,7 @@ export default function DeleteButton({ id }) {
         <div>
             <button 
                 onClick={handleDelete}
-                className="px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700"
+                className="px-2 py-1 bg-red-600 text-white rounded-lg hover:bg-red-700"
             >
                 Delete
             </button>

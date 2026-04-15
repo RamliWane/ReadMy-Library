@@ -1,10 +1,10 @@
+
 import NavbarClone from "../components/NavbarClone";
 import SidebarAdminClone from "../components/admin/SidebarAdminClone";
-import BorrowList from "../components/admin/BorrowList"
 import { getServerSession } from "next-auth/next";
 import { redirect } from "next/navigation";
 import { authOptions } from "../api/auth/[...nextauth]/route";
-import BorrowPendingClone from "../components/admin/BorrowPendingClone";
+import BookListClone from "../components/admin/BookListClone"
 
 export default async function KatalogClone() {
     const session = await getServerSession(authOptions);
@@ -21,13 +21,13 @@ export default async function KatalogClone() {
                 <SidebarAdminClone />
                 <div className="flex-1 flex flex-col overflow-y-auto no-scrollbar p-6 gap-4">
                     <div>
-                        <h1 className="text-xl font-bold">BORROW PENDING</h1>
+                        <h1 className="text-xl font-bold">BOOK LIST</h1>
                         <p className="text-[14px]" style={{ fontFamily: "'Hanken Grotesk', sans-serif" }}>
                             Lorem ipsum dolor sit amet, consectetur adipiscing
                         </p>
                     </div>
                     <hr className="border-t border-black" />
-                    <BorrowPendingClone />
+                    <BookListClone />
                 </div>
             </div>
         </div>
