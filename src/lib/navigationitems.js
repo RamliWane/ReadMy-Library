@@ -1,7 +1,7 @@
 export const libraryNav = [
   {
     label: "Discover",
-    href: "/homeclone",
+    href: "/home",
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 7l9-4 9 4-9 4-9-4zM3 17l9 4 9-4M3 12l9 4 9-4" />
@@ -19,7 +19,7 @@ export const libraryNav = [
   },
   {
     label: "Katalog",
-    href: "/katalogclone",
+    href: "/katalog",
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg"
                         fill="none"
@@ -120,7 +120,7 @@ export const menuNav = [
 export const AdminNavigation = [
 {
     label: "Discover",
-    href: "/homeclone",
+    href: "/home",
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 7l9-4 9 4-9 4-9-4zM3 17l9 4 9-4M3 12l9 4 9-4" />
@@ -138,7 +138,7 @@ export const AdminNavigation = [
   },
   {
     label: "Pending",
-    href: "/borrowpendingclone",
+    href: "/borrowpending",
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg"
                         fill="none"
@@ -153,7 +153,7 @@ export const AdminNavigation = [
   },
   {
     label: "Peminjaman",
-    href: "/borrowlistclone",
+    href: "/borrowlist",
     icon: (
        <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h10M4 18h7" />
@@ -162,7 +162,7 @@ export const AdminNavigation = [
   },
   {
     label: "BookList",
-    href: "/booklistclone",
+    href: "/booklist",
     icon: (
        <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3" />

@@ -16,7 +16,7 @@ export default function BookCard({ books }) {
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 p-1">
                 {currentBooks.map(item => (
                     <a
-                        href={`/detailclone?id=${item.id}`}
+                        href={`/detail?id=${item.id}`}
                         key={item.id || item.judul_buku}
                         className="relative group block"
                     >

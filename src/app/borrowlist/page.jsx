@@ -1,36 +1,34 @@
-import SidebarAdmin from "../components/admin/SidebarAdmin"
+import NavbarHome from "../components/NavbarHome";
+import SidebarAdmin from "../components/admin/SidebarAdmin";
 import BorrowList from "../components/admin/BorrowList"
-
 import { getServerSession } from "next-auth/next";
 import { redirect } from "next/navigation";
 import { authOptions } from "../api/auth/[...nextauth]/route";
-export default async function BorrowListPage() {
 
-// Ambil session dari server
-const session = await getServerSession(authOptions);
-console.log(session); 
+export default async function KatalogClone() {
+    const session = await getServerSession(authOptions);
+    const user = session?.user;
 
-const user = session?.user; // Ambil data user dari session
-
-//kalo gak login atau role bukan admin/petugas
-if (!session || !["admin", "petugas"].includes(session.user.role)) {
-  redirect("/forbidden");
-}
+    if (!session || !["admin", "petugas"].includes(session.user.role)) {
+        redirect("/forbidden");
+    }
 
     return (
-        <SidebarAdmin>
-            <div className="flex flex-col p-3 md:p-5 flex-1 w-full overflow-x-hidden animate-slide-up animate-delay-200">
-                <div className="flex flex-col text-start items-center justify-center md:ml-5 p-1 rounded-xl bg-white max-w-sm mb-4">
-                    <h1 className="text-lg md:text-xl lg:text-2xl text-black">
-                        <span className="text-[#6DC700]" style={{ fontFamily: "'Happy Monkey', cursive" }}>Semua Buku</span>
-                    </h1>
-                </div>
-                <div className="flex flex-col lg:flex-row gap-3 md:gap-5 md:px-5">
-                    <div className="flex-1 w-full">
-                        <BorrowList />
+        <div className="h-screen flex flex-col overflow-hidden text-black">
+            <NavbarHome />
+            <div className="flex flex-1 overflow-hidden">
+                <SidebarAdmin />
+                <div className="flex-1 flex flex-col overflow-y-auto no-scrollbar p-6 gap-4">
+                    <div>
+                        <h1 className="text-xl font-bold">BORROW LIST</h1>
+                        <p className="text-[14px]" style={{ fontFamily: "'Hanken Grotesk', sans-serif" }}>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing
+                        </p>
                     </div>
+                    <hr className="border-t border-black" />
+                    <BorrowList />
                 </div>
             </div>
-        </SidebarAdmin>
+        </div>
     )
 }

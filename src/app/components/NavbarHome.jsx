@@ -1,5 +1,5 @@
 import Image from "next/image";
-export default function Navbar() {
+export default function NavbarHome() {
     return (
         <div className="w-full h-16 bg-white flex items-center justify-between px-6 py-2 border-b border-gray-300 ">
             <div className="flex items-center gap-8">
