@@ -20,14 +20,14 @@ export default function BookCard({ books }) {
                         key={item.id || item.judul_buku}
                         className="relative group block"
                     >
-                        <div className="rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+                        <div className="rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-400 hover:scale-105">
                             <img
                                 src={item.gambar}
                                 alt={item.judul_buku}
                                 className="w-full h-[200px] sm:h-[250px] md:h-[280px] object-cover"
                             />
                             <div className="absolute inset-0 bg-linear-to-t from-black/95 via-black/60 to-transparent"></div>
-                            <div className="absolute bottom-0 left-0 w-full p-2 sm:p-3 flex flex-col justify-end">
+                            <div className="absolute bottom-0 left-0 w-full p-2 sm:p-3 flex flex-col items-center">
                                 <span className="bg-[#6DC700] text-white text-[10px] sm:text-[12px] font-semibold px-2 py-1 rounded-lg mb-1 sm:mb-2 w-fit">
                                     {item.genre}
                                 </span>

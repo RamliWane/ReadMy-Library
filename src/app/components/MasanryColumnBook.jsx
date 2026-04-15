@@ -24,7 +24,7 @@ export default async function MasanryColumnBook() {
                         />
                         <div className="absolute inset-0 from-black/95 via-black/60 to-transparent"></div>
 
-                        <div className="absolute bottom-0 left-0 w-full p-3 flex flex-col justify-end">
+                        <div className="absolute bottom-0 left-0 w-full p-3 flex flex-col items-center">
                             <span
                                 className="bg-[#6DC700] text-white text-[10px] sm:text-[10px] md:text-[12px] lg:text-[14px] font-semibold px-2 py-1 rounded-lg mb-2 sm:mb-3 w-fit"
                                 style={{ fontFamily: "'Alexandria', sans-serif" }}
