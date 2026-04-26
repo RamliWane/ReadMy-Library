@@ -30,15 +30,15 @@ export default function InputBook() {
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
           </svg>
         </div>
-        <h2 className="text-3xl font-bold text-gray-800">Tambah Buku Baru</h2>
+        <h2 className="text-2xl font-bold text-gray-800">TAMBAH BUKU BARU</h2>
       </div>
 
       <div className="space-y-5">
         <form action={tambahBuku}>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
             <div className="flex flex-col gap-2 group">
-              <label className="font-semibold text-gray-700 text-sm flex items-center gap-2">
-                Judul Buku
+              <label className="font-bold text-gray-700 text-[12px] flex items-center gap-2">
+                JUDUL BUKU
               </label>
               <input
                 name="judul_buku"
@@ -48,8 +48,8 @@ export default function InputBook() {
             </div>
 
             <div className="flex flex-col gap-2 group">
-              <label className="font-semibold text-gray-700 text-sm flex items-center gap-2">
-                Pengarang
+              <label className="font-bold text-gray-700 text-[12px] flex items-center gap-2">
+                PENGARANG
               </label>
               <input
                 name="pengarang"
@@ -59,8 +59,8 @@ export default function InputBook() {
             </div>
 
             <div className="flex flex-col gap-1 group">
-              <label className="font-semibold text-gray-700 text-sm flex items-center gap-2">
-                Penerbit
+              <label className="font-bold text-gray-700 text-[12px] flex items-center gap-2">
+                PENERBIT
               </label>
               <input
                 name="penerbit"
@@ -70,8 +70,8 @@ export default function InputBook() {
             </div>
 
             <div className="flex flex-col gap-1 group">
-              <label className="font-semibold text-gray-700 text-sm flex items-center gap-2">
-                Tahun Terbit
+              <label className="font-bold text-gray-700 text-[12px] flex items-center gap-2">
+                TAHUN TERBIT
               </label>
               <input
                 name="tahun_terbit"
@@ -81,9 +81,8 @@ export default function InputBook() {
               />
             </div>
 
-            {/* ISBN */}
             <div className="flex flex-col gap-1 group">
-              <label className="font-semibold text-gray-700 text-sm flex items-center gap-2">
+              <label className="font-bold text-gray-700 text-[12px] flex items-center gap-2">
                 ISBN
               </label>
               <input
@@ -94,8 +93,8 @@ export default function InputBook() {
             </div>
 
             <div className="flex flex-col gap-1 group">
-              <label className="font-semibold text-gray-700 text-sm flex items-center gap-2">
-                Stok
+              <label className="font-bold text-gray-700 text-[12px] flex items-center gap-2">
+                STOK
               </label>
               <input
                 name="stok"
@@ -107,8 +106,8 @@ export default function InputBook() {
           </div>
 
           <div className="flex flex-col gap-1 group pt-2">
-            <label className="font-semibold text-gray-700 text-sm flex items-center gap-2">
-              Genre
+            <label className="font-bold text-gray-700 text-[12px] flex items-center gap-2">
+              GENRE
             </label>
             <input
               name="genre"
@@ -118,8 +117,8 @@ export default function InputBook() {
           </div>
 
           <div className="flex flex-col gap-1  group pt-2">
-            <label className="font-semibold text-gray-700 text-sm flex items-center gap-2">
-              Gambar Buku (URL)
+            <label className="font-bold text-gray-700 text-[12px] flex items-center gap-2">
+              GAMBAR BUKU (URL)
             </label>
             <input
               name="gambar"
