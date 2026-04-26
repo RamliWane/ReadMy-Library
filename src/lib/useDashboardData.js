@@ -3,29 +3,32 @@ import { useState, useEffect } from 'react';
 
 export function useDashboardData() {
   const [stats, setStats] = useState(null);
+  const [totalbooks, setBooks] = useState([]);
   const [recentBorrows, setRecentBorrows] = useState([]);
-  const [popularBooks, setPopularBooks] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     async function fetchAll() {
       try {
         // Fetch paralel biar cepet
-        const [statsRes, borrowsRes, popularRes] = await Promise.all([
-          fetch('/api/dashboard/stats'),
-          fetch('/api/dashboard/recent-borrows'),
-          fetch('/api/dashboard/popular-books'),
+        const [booksRes, statsRes, borrowsRes] = await Promise.all([
+            fetch('http://localhost:5000/buku/dashboard/totalbuku'),
+            fetch('http://localhost:5000/users/dashboard/stats'),
+            fetch('http://localhost:5000/peminjaman/dashboard/recentborrow')
         ]);
 
-        const [statsData, borrowsData, popularData] = await Promise.all([
+        const [booksData, statsData, borrowsData] = await Promise.all([
+          booksRes.json(),
           statsRes.json(),
-          borrowsRes.json(),
-          popularRes.json(),
+          borrowsRes.json()
         ]);
 
-        setStats(statsData);
-        setRecentBorrows(borrowsData);
-        setPopularBooks(popularData);
+        setBooks(booksData);
+        setStats({
+            totalBuku: booksData.data[0].totalbuku,
+            anggotaAktif: statsData.data[0].totaluser,
+            bukuDipinjam: borrowsData.data[0].totalpeminjaman,
+            });
       } catch (err) {
         console.error(err);
       } finally {
@@ -36,5 +39,5 @@ export function useDashboardData() {
     fetchAll();
   }, []);
 
-  return { stats, recentBorrows, popularBooks, loading };
+  return { totalbooks, stats, recentBorrows, loading };
 }

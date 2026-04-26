@@ -7,7 +7,6 @@ export default function StatsCards({ stats, loading }) {
     { icon: <Book className="w-5 h-5 text-white" />, value: stats?.totalBuku ?? 0, label: "Total Buku" },
     { icon: <Users className="w-5 h-5 text-white" />, value: stats?.anggotaAktif ?? 0, label: "Anggota Aktif" },
     { icon: <BookOpen className="w-5 h-5 text-white" />, value: stats?.bukuDipinjam ?? 0, label: "Buku Dipinjam" },
-    { icon: <TrendingUp className="w-5 h-5 text-white" />, value: stats?.peminjamanHariIni ?? 0, label: "Peminjaman Hari Ini" },
   ];
 
   if (loading) {

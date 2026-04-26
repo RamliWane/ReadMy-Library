@@ -30,7 +30,7 @@ export default function PopularBooks({ data, loading }) {
         <h3 className="text-sm font-semibold text-slate-800">Buku Populer</h3>
       </div>
       <div className="p-4 space-y-3">
-        {data.length === 0 ? (
+        {!Array.isArray(data) || data.length === 0 ? (
           <p className="text-xs text-slate-400 text-center py-2">Belum ada data</p>
         ) : (
           data.map(({ id, judulBuku, jumlahPeminjaman }) => (

@@ -6,7 +6,6 @@ import { tambahBuku } from '@/lib/bookAction.js';
 
 export default function InputBook() {
   return (
-    <form action={tambahBuku}>
       <div className="bg-white/80 p-6 md:p-8 rounded-xl shadow-xl border border-white/20 hover:shadow-2xl transition-all duration-300">
         <div className="flex items-center gap-3 mb-3">
           <div className="w-12 h-12 bg-black rounded-2xl flex items-center justify-center shadow-lg">
@@ -123,6 +122,5 @@ export default function InputBook() {
           </form>
         </div>
       </div>
-    </form>
   );
 }
