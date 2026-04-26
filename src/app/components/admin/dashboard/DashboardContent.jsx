@@ -1,10 +1,10 @@
 'use client';
 
 import InputBook from '../InputBook';
-import StatsCards from './StatsCards';
-import RecentBorrows from './RecentBorrows';
-import PopularBooks from './PopularBooks';
-import { useDashboardData } from './useDashboardData';
+import StatsCards from './StatsCard';
+import RecentBorrows from './RecentBorrow';
+import PopularBooks from './PopularBook';
+import { useDashboardData } from '@/lib/useDashboardData.js';
 
 export default function DashboardContent() {
   const { stats, recentBorrows, popularBooks, loading } = useDashboardData();

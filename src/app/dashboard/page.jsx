@@ -3,7 +3,6 @@ import { redirect } from "next/navigation";
 import { authOptions } from "../api/auth/[...nextauth]/route";
 import SidebarAdmin from '../components/admin/SidebarAdmin';
 import NavbarHome from '../components/NavbarHome';
-import InputBook from '../components/admin/InputBook';
 import DashboardContent from '../components/admin/dashboard/DashboardContent';
 
 export default async function DashboardPerpustakaan() {
